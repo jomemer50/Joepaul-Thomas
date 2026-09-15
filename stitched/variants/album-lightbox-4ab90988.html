@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JT — Frames / The Quiet Coast Vol. II</title>
+<!-- Fonts: Space Grotesk, Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed-dim": "#cac6c3",
+            "on-surface": "#1c1b1b",
+            "on-tertiary-container": "#868381",
+            "surface-container-lowest": "#ffffff",
+            "inverse-primary": "#c8c6c5",
+            "bg": "#FAFAF9",
+            "on-tertiary-fixed": "#1d1b1a",
+            "surface-variant": "#e5e2e1",
+            "on-primary-fixed": "#1c1b1b",
+            "tertiary": "#000000",
+            "secondary-container": "#645efb",
+            "on-secondary-fixed-variant": "#3323cc",
+            "error-container": "#ffdad6",
+            "engineer-accent": "#4F46E5",
+            "primary-fixed": "#e5e2e1",
+            "tertiary-container": "#1d1b1a",
+            "surface-container-high": "#ebe7e6",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed": "#e6e1df",
+            "secondary-fixed-dim": "#c3c0ff",
+            "primary-container": "#1c1b1b",
+            "inverse-on-surface": "#f4f0ef",
+            "background": "#fdf8f8",
+            "surface-bright": "#fdf8f8",
+            "surface-container": "#f1edec",
+            "on-tertiary-fixed-variant": "#484645",
+            "inverse-surface": "#313030",
+            "line": "#E7E5E4",
+            "surface-tint": "#5f5e5e",
+            "on-secondary-fixed": "#0f0069",
+            "muted": "#6B7280",
+            "on-background": "#1c1b1b",
+            "on-primary-fixed-variant": "#474646",
+            "surface-container-low": "#f7f3f2",
+            "on-surface-variant": "#444748",
+            "on-primary": "#ffffff",
+            "primary": "#000000",
+            "secondary-fixed": "#e2dfff",
+            "outline": "#747878",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "surface-dim": "#ddd9d8",
+            "on-secondary-container": "#fffbff",
+            "error": "#ba1a1a",
+            "secondary": "#4b41e1",
+            "on-primary-container": "#858383",
+            "outline-variant": "#c4c7c7",
+            "on-secondary": "#ffffff",
+            "ink": "#111111",
+            "surface": "#FFFFFF",
+            "primary-fixed-dim": "#c8c6c5",
+            "surface-container-highest": "#e5e2e1",
+            "photo-accent": "#C2410C"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "space-lg": "2rem",
+            "margin": "2.5rem",
+            "space-xl": "4rem",
+            "gutter": "2rem"
+          },
+          "fontFamily": {
+            "label-mono": [
+              "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "monospace"
+            ],
+            "body-sm": [
+              "Inter", "sans-serif"
+            ],
+            "headline-lg-mobile": [
+              "Space Grotesk", "sans-serif"
+            ],
+            "body-md": [
+              "Inter", "sans-serif"
+            ],
+            "headline-sm": [
+              "Space Grotesk", "sans-serif"
+            ],
+            "headline-md": [
+              "Space Grotesk", "sans-serif"
+            ],
+            "headline-lg": [
+              "Space Grotesk", "sans-serif"
+            ],
+            "body-lg": [
+              "Inter", "sans-serif"
+            ]
+          },
+          "fontSize": {
+            "label-mono": [
+              "12px",
+              {
+                "lineHeight": "1",
+                "letterSpacing": "0.05em",
+                "fontWeight": "500"
+              }
+            ],
+            "body-sm": [
+              "13px",
+              {
+                "lineHeight": "1.5",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-lg-mobile": [
+              "32px",
+              {
+                "lineHeight": "1.2",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "600"
+              }
+            ],
+            "body-md": [
+              "15px",
+              {
+                "lineHeight": "1.6",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-sm": [
+              "20px",
+              {
+                "lineHeight": "1.3",
+                "fontWeight": "500"
+              }
+            ],
+            "headline-md": [
+              "32px",
+              {
+                "lineHeight": "1.2",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "500"
+              }
+            ],
+            "headline-lg": [
+              "48px",
+              {
+                "lineHeight": "1.1",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "600"
+              }
+            ],
+            "body-lg": [
+              "18px",
+              {
+                "lineHeight": "1.6",
+                "fontWeight": "400"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #FAFAF9;
+      color: #1c1b1b;
+      font-family: 'Inter', sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20;
+    }
+  </style>
+</head>
+<body class="bg-bg text-on-surface antialiased selection:bg-on-surface selection:text-surface min-h-screen flex flex-col">
+<!-- Shared Component: TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-margin md:px-margin-desktop py-space-sm h-16 bg-surface/80 dark:bg-tertiary-container/80 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline/20">
+<div class="flex items-center gap-6">
+<a class="text-headline-sm font-headline-sm font-semibold tracking-tighter text-on-surface dark:text-inverse-on-surface" href="#">JT</a>
+<span class="hidden sm:inline-block h-3 w-[1px] bg-line"></span>
+<span class="hidden sm:inline-block font-label-mono text-label-mono text-muted tracking-widest uppercase">Visual Archive</span>
+</div>
+<!-- Active Navigation Logic: This is the Frames gallery album, so 'Frames' is active -->
+<nav class="flex items-center gap-6 md:gap-8">
+<a class="text-secondary dark:text-secondary-fixed-dim font-label-md text-label-md uppercase tracking-wider hover:text-primary dark:hover:text-on-primary transition-colors duration-150" href="#">Software</a>
+<a class="text-primary dark:text-inverse-primary font-label-md text-label-md uppercase tracking-wider border-b border-primary pb-0.5" href="#">Frames</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-label-md text-label-md uppercase tracking-wider hover:text-primary dark:hover:text-on-primary transition-colors duration-150" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="text-caption-code font-caption-code uppercase tracking-wider px-3 py-1.5 rounded-DEFAULT bg-ink text-on-primary hover:bg-black transition-colors duration-150 text-[11px]" href="#inquiry">Contact</a>
+</div>
+</header>
+<!-- Main Album Canvas -->
+<main class="flex-grow pt-24 md:pt-28 pb-20 max-w-[1120px] mx-auto px-4 sm:px-6 w-full">
+<!-- Top Breadcrumb & Metadata Header -->
+<section class="border-b border-line pb-8 md:pb-12 mb-10 md:mb-14">
+<div class="flex items-center justify-between gap-4 mb-6">
+<a class="inline-flex items-center gap-1.5 text-label-mono font-label-mono text-muted hover:text-on-surface transition-colors duration-150 group" href="#">
+<span class="material-symbols-outlined text-[16px] transition-transform group-hover:-translate-x-0.5" data-icon="arrow_back">arrow_back</span>
+<span>BACK TO FRAMES</span>
+</a>
+<div class="flex items-center gap-2 text-label-mono font-label-mono text-muted">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-photo-accent"></span>
+<span>PLATE 01–09 OF 24</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-8">
+<div class="flex items-center gap-3 mb-2">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-photo-accent">Monograph Vol. II</span>
+<span class="text-muted text-xs">/</span>
+<span class="font-label-mono text-label-mono uppercase text-muted tracking-widest">Nordic Littoral Series</span>
+</div>
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-ink tracking-tight mb-4">
+            The Quiet Coast
+          </h1>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+            An eight-month study of coastal mist, geological permanence, and the human scale along the subarctic basalt shores of Iceland and the Scottish Outer Hebrides. Exposed entirely on mechanical medium format bodies and 35mm monochrome stock.
+          </p>
+</div>
+<!-- Technical Specification Card -->
+<div class="lg:col-span-4 bg-surface p-4 sm:p-5 rounded-DEFAULT border border-line">
+<h2 class="text-label-mono font-label-mono uppercase text-ink font-semibold tracking-wider mb-3 flex items-center justify-between">
+<span>Series Colophon</span>
+<span class="material-symbols-outlined text-sm text-muted" data-icon="tune">tune</span>
+</h2>
+<div class="space-y-2.5 text-body-sm font-body-sm">
+<div class="flex justify-between items-baseline border-b border-line/60 pb-1.5">
+<span class="text-muted text-label-mono font-label-mono uppercase text-[11px]">Hardware</span>
+<span class="text-ink font-medium text-right text-xs">Hasselblad 500C/M &amp; Leica M6</span>
+</div>
+<div class="flex justify-between items-baseline border-b border-line/60 pb-1.5">
+<span class="text-muted text-label-mono font-label-mono uppercase text-[11px]">Optics</span>
+<span class="text-ink font-medium text-right text-xs">Carl Zeiss 80mm f/2.8 · 35mm Summicron</span>
+</div>
+<div class="flex justify-between items-baseline border-b border-line/60 pb-1.5">
+<span class="text-muted text-label-mono font-label-mono uppercase text-[11px]">Emulsion</span>
+<span class="text-ink font-medium text-right text-xs">Ilford HP5+ · Kodak Tri-X 400</span>
+</div>
+<div class="flex justify-between items-baseline">
+<span class="text-muted text-label-mono font-label-mono uppercase text-[11px]">Archival Stock</span>
+<span class="text-ink font-medium text-right text-xs">Hahnemühle Photo Rag Baryta 315g</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Controls & Filter strip -->
+<div class="flex flex-wrap items-center justify-between gap-4 mt-8 pt-6 border-t border-line/70">
+<div class="flex items-center gap-2 sm:gap-3 font-label-mono text-label-mono">
+<button class="px-3 py-1 bg-ink text-surface rounded-DEFAULT tracking-wider text-[11px]">ALL PLATES (09)</button>
+<button class="px-3 py-1 border border-line text-on-surface-variant hover:border-ink rounded-DEFAULT tracking-wider text-[11px] transition-colors">SEASCAPES (04)</button>
+<button class="px-3 py-1 border border-line text-on-surface-variant hover:border-ink rounded-DEFAULT tracking-wider text-[11px] transition-colors">FIGURES (03)</button>
+<button class="px-3 py-1 border border-line text-on-surface-variant hover:border-ink rounded-DEFAULT tracking-wider text-[11px] transition-colors">GEOLOGY (02)</button>
+</div>
+<div class="flex items-center gap-4 text-label-mono font-label-mono text-muted text-xs">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]" data-icon="aspect_ratio">aspect_ratio</span>
+<span>Click photo to expand</span>
+</span>
+</div>
+</div>
+</section>
+<!-- 3-Column Masonry Photo Gallery Grid -->
+<div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+<!-- Photo Plate 01 (Vertical / Sea Stack Mist) -->
+<article class="break-inside-avoid bg-surface border border-line rounded-DEFAULT p-3 sm:p-3.5 transition-all duration-200 hover:border-on-surface group">
+<div class="relative overflow-hidden cursor-pointer bg-surface-container-high rounded-[2px]" onclick="openLightbox('Wanderers in the Mist', 'Reynisdrangar, Vík í Mýrdal. High tide breaker against solitary basalt pillar.', '35MM · F/4.0 · 1/250S · ISO 400 · ILFORD HP5+', 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=1400&amp;q=85')">
+<img alt="Wanderers in the Mist" class="w-full h-auto aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-[1.02]" data-alt="A fine art photographic plate of solitary human figures wandering on a black sand coastline along high sea cliffs veiled in heavy Atlantic fog. Captured on textured 35mm black and white monochrome film with soft grain and luminous highlights. The minimalist editorial style emphasizes isolation and quiet geological grandeur under diffused northern light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4l2Z2rVLYCJBtQfgMOyWKyhfzIjofjaRbIZ1uS960-FiDVzank1jOtUnJHSn7t5skiQEw1vy3fKiFEP7XWnpb0unagSFw4KoTAloq9gNQjZd2nVyiChTT_wJGBQKrHr_2i6q92gDzHWjdg8i3Z8y_mRMO9ikUZiRMsn0qi1N_yTCby5izALMEPCnNIGz83dqHzPBdQQhnC7sAj0eA4nbX5T92hrTenOWZhmNY-NMjkfyQTdd3D0davPn_TiW6FsJvYNLNETtj9Q"/>
+<!-- Hover Overlay Affordance -->
+<div class="absolute inset-0 bg-ink/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+<span class="p-2.5 rounded-full bg-surface text-ink text-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="zoom_in">zoom_in</span>
+</span>
+</div>
+<span class="absolute top-2.5 left-2.5 font-label-mono text-label-mono text-[10px] bg-ink/75 text-surface px-1.5 py-0.5 rounded-[2px] tracking-widest backdrop-blur-sm">PL. 01</span>
+</div>
+<div class="pt-3 px-1">
+<div class="flex items-center justify-between gap-2 mb-1">
+<h3 class="text-headline-sm font-headline-sm text-ink text-[16px] font-medium tracking-tight">Wanderers in the Mist</h3>
+<span class="font-label-mono text-label-mono text-[11px] text-photo-accent uppercase">Iceland</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant text-[12px] leading-snug mb-2.5">
+            Reynisdrangar shore. High tide breaker against solitary basalt pillar with figures lingering along the shelf.
+          </p>
+<div class="font-label-mono text-label-mono text-[10px] text-muted border-t border-line/60 pt-2 tracking-wide flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[13px]" data-icon="photo_camera">photo_camera</span>
+<span>35MM · F/4.0 · 1/250S · ISO 400 · HP5+</span>
+</div>
+</div>
+</article>
+<!-- Photo Plate 02 (Horizontal / The Tectonic Ridge) -->
+<article class="break-inside-avoid bg-surface border border-line rounded-DEFAULT p-3 sm:p-3.5 transition-all duration-200 hover:border-on-surface group">
+<div class="relative overflow-hidden cursor-pointer bg-surface-container-high rounded-[2px]" onclick="openLightbox('Basalt Organ Columns', 'Dyrhólaey Promontory. Hexagonal volcanic geometry shaped by sub-zero gale force wind.', '80MM · F/8.0 · 1/60S · ISO 100 · TRI-X 400 PULL 1', 'https://images.unsplash.com/photo-1518457607834-6e8d80c183c5?auto=format&amp;fit=crop&amp;w=1400&amp;q=85')">
+<img alt="Basalt Organ Columns" class="w-full h-auto aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-[1.02]" data-alt="A fine art photographic plate showing dramatic geometric basalt organ columns stretching horizontally across a misty subarctic shoreline. Captured on fine grain medium format film with deep blacks and stark structural lines. The aesthetic is purely minimalist, clean, with overcast diffuse sky and delicate sea foam reflections in charcoal grey tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKou_gtmonMK5Bt6VFcwFlWcLld2ha3vFBgJheRuL_KfihphzEpx2vrLTz_fXVAs59QQIXNDraxarzqQ4m7uMjRLjfUFgCM9aEp7JgRSoekB-kBNstlIyQc92dD1ActIfBkEBygkDkZSWBA_PAejnQ8wVwc3SElc2VSaOO9_F20HJ3s44xfX0Qr6a2kIMtNn6LRg4jneyZmX8uca0BEHJiLW5QaU0d1mGGYdbyVXyZbFmyF3fxhVyPg_ZGc5RDZQT2VX0a-p-FEA"/>
+<div class="absolute inset-0 bg-ink/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+<span class="p-2.5 rounded-full bg-surface text-ink text-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="zoom_in">zoom_in</span>
+</span>
+</div>
+<span class="absolute top-2.5 left-2.5 font-label-mono text-label-mono text-[10px] bg-ink/75 text-surface px-1.5 py-0.5 rounded-[2px] tracking-widest backdrop-blur-sm">PL. 02</span>
+</div>
+<div class="pt-3 px-1">
+<div class="flex items-center justify-between gap-2 mb-1">
+<h3 class="text-headline-sm font-headline-sm text-ink text-[16px] font-medium tracking-tight">Basalt Organ Columns</h3>
+<span class="font-label-mono text-label-mono text-[11px] text-photo-accent uppercase">Hebrides</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant text-[12px] leading-snug mb-2.5">
+            Dyrhólaey promontory. Hexagonal volcanic geometry shaped by sub-zero gale force wind.
+          </p>
+<div class="font-label-mono text-label-mono text-[10px] text-muted border-t border-line/60 pt-2 tracking-wide flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[13px]" data-icon="photo_camera">photo_camera</span>
+<span>80MM · F/8.0 · 1/60S · ISO 100 · TRI-X</span>
+</div>
+</div>
+</article>
+<!-- Photo Plate 03 (Square / Lone Beacon in Fog) -->
+<article class="break-inside-avoid bg-surface border border-line rounded-DEFAULT p-3 sm:p-3.5 transition-all duration-200 hover:border-on-surface group">
+<div class="relative overflow-hidden cursor-pointer bg-surface-container-high rounded-[2px]" onclick="openLightbox('Vestmannaeyjar Lighthouse', 'Remote clifftop signal beacon disappearing into impenetrable sea squall.', '50MM · F/2.0 · 1/500S · ISO 400 · KODAK TRI-X', 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&amp;fit=crop&amp;w=1400&amp;q=85')">
+<img alt="Vestmannaeyjar Lighthouse" class="w-full h-auto aspect-square object-cover transition-transform duration-500 group-hover:scale-[1.02]" data-alt="A fine art photographic plate of a tiny, lone white navigational beacon perched on an immense cliff edge surrounded by thick, rolling oceanic fog. Captured in square Hasselblad 6x6 framing with quiet, atmospheric negative space, high contrast silhouette, and delicate film grain rendered in subtle tones of bone, charcoal, and warm slate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt_06jrHf3HghQuhUVwVXjJ_gC532-dmv0DdisyeJlhdR3GQIVTQXwG6m_abMV0TkVjTu-OLT7xJmzdTLgMCFnaYEMHVbrJHiw3h3pWcpGaCe7lV-PyNZo0f6YS49CcWB2c_n8jtPoRkMtkkYvaVbAN1UJ9-K6C5no8w5owh6ZsRhVEXBHaLqnIynfGYJNF5xADnW08LeCOzAAhu7MHBzXx8bT1UUEemVzT-xy0YCgLiJRZvRYIDddZgBR72DifdnwVjOxQHQ6TQ"/>
+<div class="absolute inset-0 bg-ink/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+<span class="p-2.5 rounded-full bg-surface text-ink text-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="zoom_in">zoom_in</span>
+</span>
+</div>
+<span class="absolute top-2.5 left-2.5 font-label-mono text-label-mono text-[10px] bg-ink/75 text-surface px-1.5 py-0.5 rounded-[2px] tracking-widest backdrop-blur-sm">PL. 03</span>
+</div>
+<div class="pt-3 px-1">
+<div class="flex items-center justify-between gap-2 mb-1">
+<h3 class="text-headline-sm font-headline-sm text-ink text-[16px] font-medium tracking-tight">Vestmannaeyjar Signal</h3>
+<span class="font-label-mono text-label-mono text-[11px] text-photo-accent uppercase">Iceland</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant text-[12px] leading-snug mb-2.5">
+            Remote clifftop signal beacon disappearing into impenetrable sea squall at first light.
+          </p>
+<div class="font-label-mono text-label-mono text-[10px] text-muted border-t border-line/60 pt-2 tracking-wide flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[13px]" data-icon="photo_camera">photo_camera</span>
+<span>50MM · F/2.0 · 1/500S · ISO 400 · TRI-X</span>
+</div>
+</div>
+</article>
+<!-- Photo Plate 04 (Square / Breaker Study) -->
+<article class="break-inside-avoid bg-surface border border-line rounded-DEFAULT p-3 sm:p-3.5 transition-all duration-200 hover:border-on-surface group">
+<div class="relative overflow-hidden cursor-pointer bg-surface-container-high rounded-[2px]" onclick="openLightbox('Subsurface Silt', 'Black volcanic sediment churned by incoming surf near Stokksnes.', '35MM · F/5.6 · 1/125S · ISO 400 · ILFORD HP5+', 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&amp;fit=crop&amp;w=1400&amp;q=85')">
+<img alt="Subsurface Silt" class="w-full h-auto aspect-square object-cover transition-transform duration-500 group-hover:scale-[1.02]" data-alt="A fine art photographic plate showing the violent, rhythmic churn of sea foam and jet black volcanic silt colliding in shallow surf. Exposed on fine-grain 35mm film with high contrast tonal gradation, creamy white froths against absolute obsidian mineral textures. The minimalist aesthetic captures fluid dynamics with razor-sharp shutter speed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt6YkdJvF75WoEapQY4C52AFDRqSchArwIGCzY2xJiJD1pYlxqFAgogmiowPPhKV5YBsvtMR4B8jiLp1_pjXvuG_rWBfqLc0aq2RUhfkenJu2MwldQFczrYnNpez1uIXMs4H4K4lm6ty9-09DdpQm6yMquMQ4LWerjj6FmG9s35NH0q4Kx3Eb1GL7pVpr_LtkUidWvoDYVNda04IxLtucaUTY6POBLOXSfEQ8jqZPoOj8AoEpErLNV5eXLhrPd1-boHjT6fI0jSA"/>
+<div class="absolute inset-0 bg-ink/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+<span class="p-2.5 rounded-full bg-surface text-ink text-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="zoom_in">zoom_in</span>
+</span>
+</div>
+<span class="absolute top-2.5 left-2.5 font-label-mono text-label-mono text-[10px] bg-ink/75 text-surface px-1.5 py-0.5 rounded-[2px] tracking-widest backdrop-blur-sm">PL. 04</span>
+</div>
+<div class="pt-3 px-1">
+<div class="flex items-center justify-between gap-2 mb-1">
+<h3 class="text-headline-sm font-headline-sm text-ink text-[16px] font-medium tracking-tight">Subsurface Silt</h3>
+<span class="font-label-mono text-label-mono text-[11px] text-photo-accent uppercase">Iceland</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant text-[12px] leading-snug mb-2.5">
+            Black volcanic sediment churned by relentless incoming tide near the foot of Stokksnes.
+          </p>
+<div class="font-label-mono text-label-mono text-[10px] text-muted border-t border-line/60 pt-2 tracking-wide flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[13px]" data-icon="photo_camera">photo_camera</span>
+<span>35MM · F/5.6 · 1/125S · ISO 400 · HP5+</span>
+</div>
+</div>
+</article>
+<!-- Photo Plate 05 (Vertical / Solitary Figure) -->
+<article class="break-inside-avoid bg-surface border border-line rounded-DEFAULT p-3 sm:p-3.5 transition-all duration-200 hover:border-on-surface group">
+<div class="relative overflow-hidden cursor-pointer bg-surface-container-high rounded-[2px]" onclick="openLightbox('Observer on the Fjord', 'Isle of Skye headland. An unhurried presence dwarfed by precipitous cliffs.', '80MM · F/2.8 · 1/1000S · ISO 400 · ILFORD HP5+', 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&amp;fit=crop&amp;w=1400&amp;q=85')">
+<img alt="Observer on the Fjord" class="w-full h-auto aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-[1.02]" data-alt="A fine art photographic plate of a single human silhouette standing quietly on the edge of a sheer cliff overlooking an icy fjord enveloped in low coastal cloud. Captured on vintage medium format film with rich silver tonal transitions, deep charcoal rock walls, and soft ivory water below. The composition celebrates stillness, scale, and solitude." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtp952dbDqgBIzEU-XoZ8oLDX5gjSjKyFrJLcOmnztN5utSbPneiwDmwzqtuCg0L3Nzn8mf3qCmraFrn-xYDQ4cmjCGeRewNVmOnyZbCGFydB7iErffMc4S23-AFLFsZGy4mWV5LZ4r0MiyApcJEgEFLICbWKwH9dv9TwJY1LrN63t_yb6iO1z-_lj1s6w08X9mJI5F41gmarOs3QfKpGzCSKANybRyNL2M4eBGeqMcLyGi8FlpYCDyLTDtvnTpb11JnnzgeN8Fw"/>
+<div class="absolute inset-0 bg-ink/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+<span class="p-2.5 rounded-full bg-surface text-ink text-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="zoom_in">zoom_in</span>
+</span>
+</div>
+<span class="absolute top-2.5 left-2.5 font-label-mono text-label-mono text-[10px] bg-ink/75 text-surface px-1.5 py-0.5 rounded-[2px] tracking-widest backdrop-blur-sm">PL. 05</span>
+</div>
+<div class="pt-3 px-1">
+<div class="flex items-center justify-between gap-2 mb-1">
+<h3 class="text-headline-sm font-headline-sm text-ink text-[16px] font-medium tracking-tight">Observer on the Fjord</h3>
+<span class="font-label-mono text-label-mono text-[11px] text-photo-accent uppercase">Hebrides</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant text-[12px] leading-snug mb-2.5">
+            Isle of Skye headland. An unhurried presence dwarfed by precipitous limestone walls.
+          </p>
+<div class="font-label-mono text-label-mono text-[10px] text-muted border-t border-line/60 pt-2 tracking-wide flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[13px]" data-icon="photo_camera">photo_camera</span>
+<span>80MM · F/2.8 · 1/1000S · ISO 400 · HP5+</span>
+</div>
+</div>
+</article>
+<!-- Photo Plate 06 (Horizontal / Driftwood & Tide) -->
+<article class="break-inside-avoid bg-surface border border-line rounded-DEFAULT p-3 sm:p-3.5 transition-all duration-200 hover:border-on-surface group">
+<div class="relative overflow-hidden cursor-pointer bg-surface-container-high rounded-[2px]" onclick="openLightbox('Pale Driftwood Relic', 'Stranded timber smoothed by arctic currents, half-buried on Diamond Beach.', '35MM · F/8.0 · 1/30S · ISO 100 · PAN F PLUS', 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&amp;fit=crop&amp;w=1400&amp;q=85')">
+<img alt="Pale Driftwood Relic" class="w-full h-auto aspect-[16/10] object-cover transition-transform duration-500 group-hover:scale-[1.02]" data-alt="A fine art photographic plate showing weathered, bleached white driftwood resting upon wet dark gravel shore under soft arctic light. The horizontal framing emphasizes tactile wood grains, salt encrustations, and mirror-like reflections on dark receding sea water. Rendered in delicate monochrome with rich midrange gray gradations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC-PM629SvV4OwB7WNRoH6sZjhDrM55mXaDBSwyQ7SWuOEQpRDNtKgPzPOkVvuGZYEua46rkfz5G1XpWHNl3VhprWrawK9kGt59hM1M98541-LexzOzP0x6ajnW_xRU5_zIMPFFCipzuoJtXpMJ8XE4s5DZIxrLLFpTD6umSn7htOUTebYn-69qdzIndHlbB2IZeiDa3UsSbqB8bu8L_AAYaHbqHaP3K75NvOOAZfvyq8nl4HfZQldzYbV5IYEYVdXqBhbeQbMyA"/>
+<div class="absolute inset-0 bg-ink/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+<span class="p-2.5 rounded-full bg-surface text-ink text-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="zoom_in">zoom_in</span>
+</span>
+</div>
+<span class="absolute top-2.5 left-2.5 font-label-mono text-label-mono text-[10px] bg-ink/75 text-surface px-1.5 py-0.5 rounded-[2px] tracking-widest backdrop-blur-sm">PL. 06</span>
+</div>
+<div class="pt-3 px-1">
+<div class="flex items-center justify-between gap-2 mb-1">
+<h3 class="text-headline-sm font-headline-sm text-ink text-[16px] font-medium tracking-tight">Pale Driftwood Relic</h3>
+<span class="font-label-mono text-label-mono text-[11px] text-photo-accent uppercase">Iceland</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant text-[12px] leading-snug mb-2.5">
+            Stranded timber smoothed by arctic currents, half-buried on glistening black tidal sand.
+          </p>
+<div class="font-label-mono text-label-mono text-[10px] text-muted border-t border-line/60 pt-2 tracking-wide flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[13px]" data-icon="photo_camera">photo_camera</span>
+<span>35MM · F/8.0 · 1/30S · ISO 100 · PAN F</span>
+</div>
+</div>
+</article>
+<!-- Photo Plate 07 (Horizontal / Cloud Spill) -->
+<article class="break-inside-avoid bg-surface border border-line rounded-DEFAULT p-3 sm:p-3.5 transition-all duration-200 hover:border-on-surface group">
+<div class="relative overflow-hidden cursor-pointer bg-surface-container-high rounded-[2px]" onclick="openLightbox('Cloud Inversion at Quiraing', 'Dense stratocumulus spilling over steep basalt escarpment at dawn.', '50MM · F/11 · 1/15S · ISO 100 · ILFORD DELTA 100', 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&amp;fit=crop&amp;w=1400&amp;q=85')">
+<img alt="Cloud Inversion at Quiraing" class="w-full h-auto aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-[1.02]" data-alt="A fine art landscape photograph capturing a dramatic cloud inversion cascading like slow liquid over the jagged ridgeline of an ancient mountain escarpment. Shot on large format monochrome film, the image is defined by luminous high-key sky, deep velvety shadows along the crags, and ultra-fine grain texture adhering strictly to minimalist gallery presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt2wbnlVWONvOwFA_KJv_IaApf1n2Z9dtmsIZhRKuvsBITXORulM6MfrwnwUhZsnmlELQKx5j161PJiH8IlmRGO12WBt4mqbFV_1i80sbuoiKq5rAyij7r_hdZ20EUgyKgVtSSuJG4I4Yv4Gt4SJJh0oPxN5HFOIcbN9SaO522camIvUKM1X4V72LpstA5bXKsCxjQ24G8C7m0OaXtbHCCjotHNdH4NnTw9kCmzFwIOH06RpnXCi8PAeX4ZY1H9inZ1SNmETkntA"/>
+<div class="absolute inset-0 bg-ink/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+<span class="p-2.5 rounded-full bg-surface text-ink text-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="zoom_in">zoom_in</span>
+</span>
+</div>
+<span class="absolute top-2.5 left-2.5 font-label-mono text-label-mono text-[10px] bg-ink/75 text-surface px-1.5 py-0.5 rounded-[2px] tracking-widest backdrop-blur-sm">PL. 07</span>
+</div>
+<div class="pt-3 px-1">
+<div class="flex items-center justify-between gap-2 mb-1">
+<h3 class="text-headline-sm font-headline-sm text-ink text-[16px] font-medium tracking-tight">Escarpment Spill</h3>
+<span class="font-label-mono text-label-mono text-[11px] text-photo-accent uppercase">Hebrides</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant text-[12px] leading-snug mb-2.5">
+            Quiraing ridge line. Dense stratocumulus pouring over frozen cliffs into the Sound of Raasay.
+          </p>
+<div class="font-label-mono text-label-mono text-[10px] text-muted border-t border-line/60 pt-2 tracking-wide flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[13px]" data-icon="photo_camera">photo_camera</span>
+<span>50MM · F/11 · 1/15S · ISO 100 · DELTA 100</span>
+</div>
+</div>
+</article>
+<!-- Photo Plate 08 (Vertical / Sea Arch in Rainfall) -->
+<article class="break-inside-avoid bg-surface border border-line rounded-DEFAULT p-3 sm:p-3.5 transition-all duration-200 hover:border-on-surface group">
+<div class="relative overflow-hidden cursor-pointer bg-surface-container-high rounded-[2px]" onclick="openLightbox('Gatlett Arch in Squall', 'Natural stone bridge enduring North Atlantic spray and hail burst.', '35MM · F/4.0 · 1/500S · ISO 800 · CINESTILL 800T (B&amp;W PROC)', 'https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&amp;fit=crop&amp;w=1400&amp;q=85')">
+<img alt="Gatlett Arch in Squall" class="w-full h-auto aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-[1.02]" data-alt="A fine art photographic plate depicting a massive natural stone sea arch pounded by ocean squall and white spray on a stormy coastline. Shot on 35mm film with high grain structure, evocative rain streaks, dark textured monolithic rock, and minimalist light-toned ocean water in pure monochrome shades." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWBfimr8LU1XgfFxsT6edwJWyVn9EmXkVt1_B8ydTUnYjriKrQdU0rAumQ5AdyQupVvyX6Xx5K3kh-GDmrCs0xtlbr9ZNQP1Bxym3V4bt7kfimyakcw6nrN7EtLVuHutpFOIHFLWQeRbRwgKRkDPoAADvnFAR3HdHC5L5bjsqvshZgAltxUYddlFVua8Lymp8HTmaA7TXuS4eN6A33Yvz3g__-z17cGEijweGqd3RpYPj5B-ASvrYY4IcD4wJfYRTKeStZPyChXQ"/>
+<div class="absolute inset-0 bg-ink/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+<span class="p-2.5 rounded-full bg-surface text-ink text-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="zoom_in">zoom_in</span>
+</span>
+</div>
+<span class="absolute top-2.5 left-2.5 font-label-mono text-label-mono text-[10px] bg-ink/75 text-surface px-1.5 py-0.5 rounded-[2px] tracking-widest backdrop-blur-sm">PL. 08</span>
+</div>
+<div class="pt-3 px-1">
+<div class="flex items-center justify-between gap-2 mb-1">
+<h3 class="text-headline-sm font-headline-sm text-ink text-[16px] font-medium tracking-tight">Gatlett Arch</h3>
+<span class="font-label-mono text-label-mono text-[11px] text-photo-accent uppercase">Iceland</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant text-[12px] leading-snug mb-2.5">
+            Natural volcanic bridge enduring North Atlantic spray and a passing hail squall.
+          </p>
+<div class="font-label-mono text-label-mono text-[10px] text-muted border-t border-line/60 pt-2 tracking-wide flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[13px]" data-icon="photo_camera">photo_camera</span>
+<span>35MM · F/4.0 · 1/500S · ISO 800 · CINESTILL</span>
+</div>
+</div>
+</article>
+<!-- Photo Plate 09 (Square / Tide pool ripple) -->
+<article class="break-inside-avoid bg-surface border border-line rounded-DEFAULT p-3 sm:p-3.5 transition-all duration-200 hover:border-on-surface group">
+<div class="relative overflow-hidden cursor-pointer bg-surface-container-high rounded-[2px]" onclick="openLightbox('Tidal Mirror', 'Calm pool trapped between basalt slabs reflecting low grey sky.', '80MM · F/5.6 · 1/60S · ISO 400 · ILFORD HP5+', 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&amp;fit=crop&amp;w=1400&amp;q=85')">
+<img alt="Tidal Mirror" class="w-full h-auto aspect-square object-cover transition-transform duration-500 group-hover:scale-[1.02]" data-alt="A fine art photographic plate showing a minimalist square composition of a glassy tide pool nestled between dark textured basalt rock shelves. A single raindrop creates concentric circular ripples across the water, mirroring the overcast sky. Crisp light-mode visual design, precise contrast, and tangible analog film grain." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJck_iWdmTbBwTkefZ6fhh4Uo9qMjV4ImPmR9wcIuPWXsK9AfzqDdGUht221OQZ8K5MTpE2lZcjDw2fhkmiMSRanEn1qYOwbhE0f2YOkeQDd284K4-dBkJxJIvSFJQ8qw_MyZcf8Ll9PNZ_t6LV0-QHtDHporcVIDsHYA-aTjQgMz73ADsRxyQRqULKIPbZu6TDpX6xbeLEaanjdwN12iDQKssUnNmXQ-yCyy2IrJEpirFbtzdfOdmVudSM-NRS35uMeoy_L1bdg"/>
+<div class="absolute inset-0 bg-ink/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+<span class="p-2.5 rounded-full bg-surface text-ink text-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="zoom_in">zoom_in</span>
+</span>
+</div>
+<span class="absolute top-2.5 left-2.5 font-label-mono text-label-mono text-[10px] bg-ink/75 text-surface px-1.5 py-0.5 rounded-[2px] tracking-widest backdrop-blur-sm">PL. 09</span>
+</div>
+<div class="pt-3 px-1">
+<div class="flex items-center justify-between gap-2 mb-1">
+<h3 class="text-headline-sm font-headline-sm text-ink text-[16px] font-medium tracking-tight">Tidal Mirror</h3>
+<span class="font-label-mono text-label-mono text-[11px] text-photo-accent uppercase">Hebrides</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant text-[12px] leading-snug mb-2.5">
+            Calm pool trapped between basalt slabs, momentarily catching low grey sky.
+          </p>
+<div class="font-label-mono text-label-mono text-[10px] text-muted border-t border-line/60 pt-2 tracking-wide flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[13px]" data-icon="photo_camera">photo_camera</span>
+<span>80MM · F/5.6 · 1/60S · ISO 400 · HP5+</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Archival Print Collector Inquiry Section -->
+<section class="mt-20 pt-12 border-t border-line" id="inquiry">
+<div class="bg-surface border border-line rounded-DEFAULT p-6 sm:p-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-5">
+<span class="font-label-mono text-label-mono text-photo-accent uppercase tracking-widest block mb-2">Darkroom Editions</span>
+<h2 class="text-headline-md font-headline-md text-ink tracking-tight mb-3">
+              Archival Silver Gelatin &amp; Pigment Prints
+            </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 leading-relaxed">
+              Every plate in <em class="italic">The Quiet Coast</em> is offered in an edition of 10 (+ 2 AP), printed on 315gsm Hahnemühle Photo Rag Baryta with archival carbon inks. Each plate is accompanied by an embossed certificate of authenticity signed and numbered by Joepaul Thomas.
+            </p>
+<div class="flex items-center gap-3 text-label-mono font-label-mono text-muted text-xs">
+<span class="material-symbols-outlined text-base" data-icon="verified">verified</span>
+<span>Signed, Numbered &amp; Stamped verso</span>
+</div>
+</div>
+<div class="lg:col-span-7 bg-bg p-6 rounded-DEFAULT border border-line">
+<h3 class="text-headline-sm font-headline-sm text-ink text-sm font-medium mb-4 uppercase tracking-wider">Acquisition Inquiry</h3>
+<form class="space-y-4" onsubmit="event.preventDefault(); alert('Inquiry recorded. The studio will respond within 24 hours with framing specs and edition availability.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-mono text-label-mono text-[11px] text-muted mb-1.5 uppercase">Collector Name</label>
+<input class="w-full text-body-sm font-body-sm bg-surface border border-line rounded-DEFAULT px-3 py-2 text-ink focus:outline-none focus:border-photo-accent" placeholder="Jane Doe" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-mono text-label-mono text-[11px] text-muted mb-1.5 uppercase">Email Address</label>
+<input class="w-full text-body-sm font-body-sm bg-surface border border-line rounded-DEFAULT px-3 py-2 text-ink focus:outline-none focus:border-photo-accent" placeholder="jane@studio.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-mono text-label-mono text-[11px] text-muted mb-1.5 uppercase">Plate Selection</label>
+<select class="w-full text-body-sm font-body-sm bg-surface border border-line rounded-DEFAULT px-3 py-2 text-ink focus:outline-none focus:border-photo-accent">
+<option>PL. 01 — Wanderers in the Mist</option>
+<option>PL. 02 — Basalt Organ Columns</option>
+<option>PL. 03 — Vestmannaeyjar Signal</option>
+<option>PL. 04 — Subsurface Silt</option>
+<option>PL. 05 — Observer on the Fjord</option>
+<option>PL. 06 — Pale Driftwood Relic</option>
+<option>Full Portfolio Monograph Folio (1–9)</option>
+</select>
+</div>
+<div>
+<label class="block font-label-mono text-label-mono text-[11px] text-muted mb-1.5 uppercase">Desired Size</label>
+<select class="w-full text-body-sm font-body-sm bg-surface border border-line rounded-DEFAULT px-3 py-2 text-ink focus:outline-none focus:border-photo-accent">
+<option>16 × 20 in · Edition of 10</option>
+<option>24 × 30 in · Edition of 7</option>
+<option>30 × 40 in · Edition of 3</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-mono text-label-mono text-[11px] text-muted mb-1.5 uppercase">Framing / Shipping Notes</label>
+<textarea class="w-full text-body-sm font-body-sm bg-surface border border-line rounded-DEFAULT px-3 py-2 text-ink focus:outline-none focus:border-photo-accent" placeholder="Custom natural white oak frame, UV70 non-reflective glass, delivery to Tokyo..." rows="2"></textarea>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-mono text-label-mono text-[11px] text-muted">Worldwide insured courier · DHL Express</span>
+<button class="px-5 py-2 rounded-DEFAULT bg-ink text-surface font-label-mono text-label-mono text-xs uppercase tracking-wider hover:bg-black transition-colors" type="submit">
+                  Transmit Request
+                </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Interactive Lightbox Modal -->
+<div class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-8" id="lightboxModal" onclick="closeLightbox(event)">
+<div class="relative max-w-5xl w-full max-h-[942px] flex flex-col items-center justify-center" onclick="event.stopPropagation()">
+<!-- Close button -->
+<button class="absolute -top-10 right-0 sm:right-2 text-white/70 hover:text-white flex items-center gap-1 font-label-mono text-label-mono text-xs uppercase" onclick="closeLightboxDirect()">
+<span>CLOSE</span>
+<span class="material-symbols-outlined text-lg" data-icon="close">close</span>
+</button>
+<!-- Main Lightbox Image Frame -->
+<div class="bg-black border border-white/10 p-2 rounded-DEFAULT flex items-center justify-center max-h-[768px] overflow-hidden">
+<img alt="" class="max-h-[716px] w-auto object-contain" id="lightboxImg" src=""/>
+</div>
+<!-- Lightbox Meta Bar -->
+<div class="w-full mt-4 bg-surface p-4 rounded-DEFAULT border border-line flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+<div>
+<h4 class="text-headline-sm font-headline-sm text-ink text-base font-semibold" id="lightboxTitle">Title</h4>
+<p class="text-body-sm font-body-sm text-muted text-xs" id="lightboxDesc">Description</p>
+</div>
+<div class="sm:text-right">
+<span class="block font-label-mono text-label-mono text-[11px] text-photo-accent uppercase">EXIF / Film Record</span>
+<span class="font-label-mono text-label-mono text-[11px] text-ink" id="lightboxExif">EXIF</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Shared Component: Footer -->
+<footer class="w-full border-t border-outline-variant/30 dark:border-outline/20 px-margin md:px-margin-desktop py-space-md flex flex-col md:flex-row justify-between items-center z-40 bg-surface dark:bg-tertiary">
+<div class="text-caption-code font-caption-code uppercase tracking-widest text-on-surface-variant dark:text-secondary-fixed-dim text-xs mb-3 md:mb-0">
+      © 2024 JOEPAUL THOMAS. ALL RIGHTS RESERVED. [TWO SIDES SAME FACE]
+    </div>
+<div class="flex items-center gap-6 text-secondary dark:text-secondary-fixed-dim font-caption-code text-caption-code uppercase tracking-widest text-xs">
+<a class="hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#">Index</a>
+<a class="hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#">Colophon</a>
+<a class="hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#">Archive</a>
+<a class="hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#inquiry">Transmit</a>
+</div>
+</footer>
+<!-- Lightbox Interaction Script -->
+<script>
+    function openLightbox(title, desc, exif, imgSrc) {
+      document.getElementById('lightboxTitle').innerText = title;
+      document.getElementById('lightboxDesc').innerText = desc;
+      document.getElementById('lightboxExif').innerText = exif;
+      document.getElementById('lightboxImg').src = imgSrc;
+      document.getElementById('lightboxImg').alt = title;
+      document.getElementById('lightboxModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(event) {
+      document.getElementById('lightboxModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function closeLightboxDirect() {
+      document.getElementById('lightboxModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeLightboxDirect();
+      }
+    });
+  </script>
+</body></html>

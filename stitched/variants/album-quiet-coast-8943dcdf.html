@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Quiet Coast, Vol. I — JT Visual Archive</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-container": "#868381",
+            "surface-container-high": "#ebe7e6",
+            "photo-accent": "#C2410C",
+            "inverse-primary": "#c8c6c5",
+            "outline": "#747878",
+            "tertiary-fixed": "#e6e1df",
+            "outline-variant": "#c4c7c7",
+            "on-background": "#1c1b1b",
+            "on-secondary-fixed-variant": "#3323cc",
+            "muted": "#6B7280",
+            "line": "#E7E5E4",
+            "surface-container": "#f1edec",
+            "secondary": "#4b41e1",
+            "on-surface": "#1c1b1b",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f7f3f2",
+            "primary": "#000000",
+            "on-primary": "#ffffff",
+            "on-secondary-container": "#fffbff",
+            "on-tertiary-fixed": "#1d1b1a",
+            "background": "#fdf8f8",
+            "secondary-fixed-dim": "#c3c0ff",
+            "on-secondary-fixed": "#0f0069",
+            "surface-container-highest": "#e5e2e1",
+            "engineer-accent": "#4F46E5",
+            "surface-variant": "#e5e2e1",
+            "surface": "#FFFFFF",
+            "error": "#ba1a1a",
+            "surface-tint": "#5f5e5e",
+            "inverse-on-surface": "#f4f0ef",
+            "on-primary-fixed": "#1c1b1b",
+            "on-error": "#ffffff",
+            "inverse-surface": "#313030",
+            "secondary-container": "#645efb",
+            "surface-bright": "#fdf8f8",
+            "primary-fixed": "#e5e2e1",
+            "secondary-fixed": "#e2dfff",
+            "tertiary-container": "#1d1b1a",
+            "error-container": "#ffdad6",
+            "on-tertiary": "#ffffff",
+            "surface-dim": "#ddd9d8",
+            "on-primary-fixed-variant": "#474646",
+            "bg": "#FAFAF9",
+            "primary-fixed-dim": "#c8c6c5",
+            "on-surface-variant": "#444748",
+            "on-primary-container": "#858383",
+            "on-tertiary-fixed-variant": "#484645",
+            "ink": "#111111",
+            "primary-container": "#1c1b1b",
+            "tertiary": "#000000",
+            "on-error-container": "#93000a",
+            "tertiary-fixed-dim": "#cac6c3",
+            "on-secondary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-lg": "2rem",
+            "margin": "2.5rem",
+            "space-sm": "0.5rem",
+            "space-xl": "4rem",
+            "space-md": "1rem",
+            "gutter": "2rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Space Grotesk"],
+            "body-lg": ["Inter"],
+            "headline-md": ["Space Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "body-md": ["Inter"],
+            "body-sm": ["Inter"],
+            "label-mono": ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"]
+          },
+          "fontSize": {
+            "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "headline-md": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "1.3", "fontWeight": "500" }],
+            "body-md": ["15px", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "1.5", "fontWeight": "400" }],
+            "label-mono": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Subtle editorial film grid column flow */
+    .masonry-col-3 {
+      column-count: 1;
+      column-gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-col-3 {
+        column-count: 2;
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-col-3 {
+        column-count: 3;
+      }
+    }
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body class="bg-bg text-on-surface antialiased font-body-md min-h-screen flex flex-col selection:bg-photo-accent selection:text-surface">
+<!-- TOP NAV BAR (Shared Component Anchor) -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-margin md:px-margin-desktop py-space-sm h-16 bg-surface/80 dark:bg-tertiary-container/80 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline/20">
+<!-- Brand / Monogram -->
+<a class="text-headline-sm font-headline-sm font-semibold tracking-tighter text-on-surface dark:text-inverse-on-surface hover:opacity-80 transition-opacity" href="#">
+      JT
+    </a>
+<!-- Navigation links (Desktop) -->
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-secondary dark:text-secondary-fixed-dim font-label-md text-label-md uppercase tracking-wider hover:text-primary dark:hover:text-on-primary transition-colors duration-150" href="#">
+        Software
+      </a>
+<!-- Active Link for Visual Archive / Photography frames -->
+<a class="text-primary dark:text-inverse-primary font-label-md text-label-md uppercase tracking-wider border-b border-primary pb-0.5" href="#">
+        Frames
+      </a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-label-md text-label-md uppercase tracking-wider hover:text-primary dark:hover:text-on-primary transition-colors duration-150" href="#">
+        About
+      </a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center gap-4">
+<span class="hidden lg:inline-block font-label-mono text-label-mono text-muted uppercase tracking-widest">[ARCHIVE // ED. 01]</span>
+<a class="px-4 py-2 bg-ink text-on-primary text-label-mono font-label-mono uppercase tracking-widest text-xs rounded hover:bg-black transition-colors duration-150" href="#contact">
+        Contact
+      </a>
+</div>
+</header>
+<!-- MAIN WRAPPER (Disciplined Capped 1120px) -->
+<main class="flex-grow pt-24 pb-20 px-4 sm:px-6 md:px-8 max-w-[1120px] mx-auto w-full">
+<!-- SUB-NAV BREADCRUMB -->
+<div class="mb-8 flex items-center justify-between border-b border-line pb-3">
+<a class="inline-flex items-center gap-1.5 font-label-mono text-label-mono uppercase text-muted hover:text-ink transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
+        BACK TO FRAMES / SERIES 01: THE QUIET COAST, VOL. I
+      </a>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-photo-accent animate-pulse"></span>
+<span class="font-label-mono text-label-mono text-xs text-photo-accent uppercase tracking-widest">DARKROOM ARCHIVE</span>
+</div>
+</div>
+<!-- ALBUM HEADER / MONOGRAPH INTRO -->
+<section class="mb-12">
+<!-- Eyebrow Meta -->
+<div class="font-label-mono text-label-mono uppercase tracking-widest text-muted mb-3 flex flex-wrap gap-y-1">
+<span>[ VOL.01 // 35MM ARCHIVE ]</span>
+<span class="mx-2">·</span>
+<span>REEL: ILFORD HP5+ / PORTRA 400</span>
+<span class="mx-2">·</span>
+<span>LOC: VÍK &amp; SNÆFELLSNES, ICELAND</span>
+</div>
+<!-- Main Title -->
+<h1 class="font-headline-lg text-headline-lg md:text-headline-lg text-ink font-semibold tracking-tight mb-4">
+        The Quiet Coast, Vol. I
+      </h1>
+<!-- Lead Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mb-8 leading-relaxed">
+        42 exposures documenting basalt sea stacks, arctic ocean swells, and fleeting human scale lost in North Atlantic mist.
+      </p>
+<!-- Technical Summary Strip & Filters -->
+<div class="p-4 bg-surface border border-line rounded flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex flex-wrap items-center gap-x-6 gap-y-2 font-label-mono text-label-mono text-muted text-xs">
+<div><span class="text-ink font-medium">BODY:</span> Leica M6 Classic</div>
+<div><span class="text-ink font-medium">OPTIC:</span> 35mm f/2 Summicron</div>
+<div><span class="text-ink font-medium">CHEMISTRY:</span> D-76 1:1</div>
+<div><span class="text-ink font-medium">EDITION:</span> Open Gelatin Baryta</div>
+</div>
+<!-- Filter Pills -->
+<div class="flex items-center flex-wrap gap-2">
+<button class="px-2.5 py-1 bg-ink text-surface text-label-mono font-label-mono text-xs rounded uppercase tracking-wider">
+            ALL EXPOSURES (18)
+          </button>
+<button class="px-2.5 py-1 bg-surface border border-line text-muted hover:text-ink text-label-mono font-label-mono text-xs rounded uppercase tracking-wider transition-colors">
+            MONOCHROME (HP5+)
+          </button>
+<button class="px-2.5 py-1 bg-surface border border-line text-muted hover:text-ink text-label-mono font-label-mono text-xs rounded uppercase tracking-wider transition-colors">
+            CHROMOGENIC (PORTRA)
+          </button>
+</div>
+</div>
+</section>
+<!-- MASONRY GALLERY GRID (Responsive 3-Column Editorial Grid) -->
+<section class="masonry-col-3 mb-16" id="gallery">
+<!-- HERO PLATE 01: Book Spread Feature (DATA:IMAGE:IMAGE_10) -->
+<div class="masonry-item bg-surface border border-line rounded p-2.5 group transition-all duration-200 hover:border-ink">
+<div class="relative overflow-hidden bg-surface-container-low cursor-pointer aspect-[16/10]" onclick="openLightbox(0)">
+<img alt="Open photography monograph spread showing Wanderers in the Mist, 35mm film photograph of basalt cliffs and ocean fog" class="w-full h-full object-cover grayscale contrast-110 group-hover:scale-[1.02] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1U_WhDePh5q1rFilI29hnbx7HrjqIJBSGGM0jDbJ292otAxAwEo2fZmecJNfi6LNv952-JMGj3de9_K0m96ffaNtjm1k30ar1258ZFzjgijcXSQWooxe7bzE0iHTHCVgQRDdaPHn3eecST-BURpHU_Hy2dvsZoOEw8VjPfh9wqRGPeduZmNrg0w-o4UGoN8qjMY7I5x1g-Bdw_yL5sa7jQI6GJmxsOlhF97gN0C96nT87bLsNkXKx_G6A"/>
+<div class="absolute inset-0 bg-ink/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="px-3 py-1.5 bg-surface text-ink font-label-mono text-label-mono text-xs uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="zoom_in">zoom_in</span> [ + EXPAND ]
+            </span>
+</div>
+<div class="absolute top-2 left-2 bg-ink/80 text-surface font-label-mono text-[10px] px-1.5 py-0.5 uppercase tracking-widest backdrop-blur-xs">
+            PLATE 01/42 · SPREAD MASTER
+          </div>
+</div>
+<div class="pt-3 pb-1 px-1">
+<div class="flex items-center justify-between font-label-mono text-[11px] text-muted tracking-tight border-b border-line pb-1.5 mb-1.5">
+<span>35MM · F/4.0 · 1/250S · ISO 400</span>
+<span class="text-photo-accent font-medium uppercase">HP5+ // 400</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-medium text-ink mb-1 text-base">Wanderers in the Mist</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            Volcanic basalt crags shrouded in arctic fog near Snæfellsjökull. Solitary coastal ramblers reduced to silhouettes against Atlantic surf.
+          </p>
+</div>
+</div>
+<!-- PLATE 02: Vertical Needle Sea Stack -->
+<div class="masonry-item bg-surface border border-line rounded p-2.5 group transition-all duration-200 hover:border-ink">
+<div class="relative overflow-hidden bg-surface-container-low cursor-pointer aspect-[4/5]" onclick="openLightbox(1)">
+<img class="w-full h-full object-cover grayscale contrast-115 group-hover:scale-[1.02] transition-transform duration-500" data-alt="Monochrome 35mm film photograph of a dramatic vertical basalt sea needle towering out of turbulent North Atlantic waves. The sky is overcast with diffuse Nordic cloud cover, casting an even luminous glow across wet volcanic rock surfaces. Fine analog silver halide grain defines deep shadow blacks and pristine foamy sea spray." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB32iW75D-xrFyOXFy-zKtG5Y7CNVgCUyGRX_YbLn5oI_snrUdm1paYChQw09iCd6Qq4zcL5GXyXgWTE8F8PZ_IsDMPiEWPHYpilHRcCgq4pEGPcqWoptiSKkvQrq0Gel06qYotke7cVMIHwEaudO3bsoN6iN-6lNNYBGSfIkmOVWI0jbDe1MGWlRvkDLKfR9iqahfu262xczw-Nm26Uzrpz7zUPh0xncQ-wDDxcynkbNEh4nNvmJT9QRyRLtt2J54M_0F6GSHtvw"/>
+<div class="absolute inset-0 bg-ink/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="px-3 py-1.5 bg-surface text-ink font-label-mono text-label-mono text-xs uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="zoom_in">zoom_in</span> [ + EXPAND ]
+            </span>
+</div>
+<div class="absolute top-2 left-2 bg-ink/80 text-surface font-label-mono text-[10px] px-1.5 py-0.5 uppercase tracking-widest backdrop-blur-xs">
+            PLATE 02/42
+          </div>
+</div>
+<div class="pt-3 pb-1 px-1">
+<div class="flex items-center justify-between font-label-mono text-[11px] text-muted tracking-tight border-b border-line pb-1.5 mb-1.5">
+<span>35MM · F/8.0 · 1/500S · ISO 400</span>
+<span class="text-photo-accent font-medium uppercase">HP5+ // PUSH +1</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-medium text-ink mb-1 text-base">Reynisdrangar Sentinel</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Reynisfjara black sand needles at low tide, caught during an approaching sub-polar gale.
+          </p>
+</div>
+</div>
+<!-- PLATE 03: Minimal Square Horizon -->
+<div class="masonry-item bg-surface border border-line rounded p-2.5 group transition-all duration-200 hover:border-ink">
+<div class="relative overflow-hidden bg-surface-container-low cursor-pointer aspect-square" onclick="openLightbox(2)">
+<img class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" data-alt="Quiet minimalist fine art photograph of an empty sub-arctic ocean horizon under heavy fog and calm slate-gray swells. The image features high key tones of pale mist meeting the textured surface of deep dark water with subtle analog grain. A muted editorial aesthetic inspired by Japanese photobooks and stark Nordic geography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbCMOECcaMHZxlrmjBfUiAw6qKE2KxRWw1d7obkS7iIdnBhQosEu8osgRD6g2EGYZUquB5xUZ7aI4vfDSu-Os8e1quH8C8PKHsQhPoXGtMv8jS66XCuZriotQkAyy1IESZS_3aYSKFr_SG-MpDp9CQpGUi0atMeix_yYg6VLMy4Uu_XY1JEfO4TYET_kwF5HCvsCqnFoU0tcW1jtxQWOU17rGaI8Xosj0766cK-iaUvJ8pN4A1NBHIusXLjxodnBl5pM5Fsvy_Pg"/>
+<div class="absolute inset-0 bg-ink/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="px-3 py-1.5 bg-surface text-ink font-label-mono text-label-mono text-xs uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="zoom_in">zoom_in</span> [ + EXPAND ]
+            </span>
+</div>
+<div class="absolute top-2 left-2 bg-ink/80 text-surface font-label-mono text-[10px] px-1.5 py-0.5 uppercase tracking-widest backdrop-blur-xs">
+            PLATE 03/42
+          </div>
+</div>
+<div class="pt-3 pb-1 px-1">
+<div class="flex items-center justify-between font-label-mono text-[11px] text-muted tracking-tight border-b border-line pb-1.5 mb-1.5">
+<span>50MM · F/2.8 · 1/125S · ISO 160</span>
+<span class="text-photo-accent font-medium uppercase">PORTRA 160</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-medium text-ink mb-1 text-base">The White Null</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Total loss of horizon line between glacial rain and northern ocean currents.
+          </p>
+</div>
+</div>
+<!-- PLATE 04: Black Sand Ripples & Stranded Ice -->
+<div class="masonry-item bg-surface border border-line rounded p-2.5 group transition-all duration-200 hover:border-ink">
+<div class="relative overflow-hidden bg-surface-container-low cursor-pointer aspect-[3/4]" onclick="openLightbox(3)">
+<img class="w-full h-full object-cover grayscale group-hover:scale-[1.02] transition-transform duration-500" data-alt="High contrast architectural black and white medium format photograph of stranded glacial ice diamonds resting upon dark volcanic basalt black sand. Crystalline textures catch the cold ambient daylight with crisp sharp specular highlights, contrasting against the matte jet black iron sand beach of Breiðamerkursandur." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeLGmsyu0r-zDof-PnC1XM-L4oc34cATeyAPpxT49qkIPYfvEG1sT9Q9XuCiI52-S5TkYRm372giO5IsgzX_0HE1zS25scU1FVYIXbD1GelzLxSN4UqEDQiGVnRRzJBQMjJExy6dnNyxJ51xxiz6Mm_4Z0hC2INrk1snsJos3KRb4OrrhCSQQV7jUzMT2wU0RK_29nxY0lGpVwybiKzQXdPznduWmqI7JKfXfcNKdFHUsPKJ1J36xX-I4v4xFmveK5O-9YbkJb9A"/>
+<div class="absolute inset-0 bg-ink/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="px-3 py-1.5 bg-surface text-ink font-label-mono text-label-mono text-xs uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="zoom_in">zoom_in</span> [ + EXPAND ]
+            </span>
+</div>
+<div class="absolute top-2 left-2 bg-ink/80 text-surface font-label-mono text-[10px] px-1.5 py-0.5 uppercase tracking-widest backdrop-blur-xs">
+            PLATE 04/42
+          </div>
+</div>
+<div class="pt-3 pb-1 px-1">
+<div class="flex items-center justify-between font-label-mono text-[11px] text-muted tracking-tight border-b border-line pb-1.5 mb-1.5">
+<span>35MM · F/5.6 · 1/125S · ISO 400</span>
+<span class="text-photo-accent font-medium uppercase">HP5+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-medium text-ink mb-1 text-base">Calving Remnants</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Glacial iceberg fragment melting into basalt grains under slow evening drizzle.
+          </p>
+</div>
+</div>
+<!-- PLATE 05: Distant Lighthouse & Storm Cliff -->
+<div class="masonry-item bg-surface border border-line rounded p-2.5 group transition-all duration-200 hover:border-ink">
+<div class="relative overflow-hidden bg-surface-container-low cursor-pointer aspect-[16/10]" onclick="openLightbox(4)">
+<img class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" data-alt="Moody cinematic wide landscape photograph featuring a lone orange and white concrete arctic lighthouse perched on the precipice of massive shear sea cliffs. The sky is dark with stormy sea squalls sweeping across cold turquoise ocean waters. Warm tungsten signal glow pierces through misty precipitation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACt0zBuqPqKvamhI2oLWu0vR6EyKFZeqG9KGcKFzSHR2nggKcFB727GL354zX0xntg-wzAZ4BmTz9kFAJgXG4ebsdtRRhTP7F_Ac_IAE6Ec0uXz-lHFUYAKomGqODFLZu4jYTmAmYUqlFTuHQWN1zPOPC3huxzo7So7ArPDqxz3QZI5Y6qJJJxUYsclsoH3L7YkR-pKHQ_b8xuUDykinypL4Nn8vWFTQ3lQOaHM9E8UVRiqIR2I7MFQ7lSNQ5eH9_F2NDLMQ_sbA"/>
+<div class="absolute inset-0 bg-ink/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="px-3 py-1.5 bg-surface text-ink font-label-mono text-label-mono text-xs uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="zoom_in">zoom_in</span> [ + EXPAND ]
+            </span>
+</div>
+<div class="absolute top-2 left-2 bg-ink/80 text-surface font-label-mono text-[10px] px-1.5 py-0.5 uppercase tracking-widest backdrop-blur-xs">
+            PLATE 05/42
+          </div>
+</div>
+<div class="pt-3 pb-1 px-1">
+<div class="flex items-center justify-between font-label-mono text-[11px] text-muted tracking-tight border-b border-line pb-1.5 mb-1.5">
+<span>35MM · F/4.0 · 1/60S · ISO 400</span>
+<span class="text-photo-accent font-medium uppercase">PORTRA 400</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-medium text-ink mb-1 text-base">Dyrhólaey Beacon</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Late afternoon gale approaching the headland peninsula with 45-knot crosswinds.
+          </p>
+</div>
+</div>
+<!-- PLATE 06: Solitary Walker Silhouettes -->
+<div class="masonry-item bg-surface border border-line rounded p-2.5 group transition-all duration-200 hover:border-ink">
+<div class="relative overflow-hidden bg-surface-container-low cursor-pointer aspect-[3/4]" onclick="openLightbox(5)">
+<img class="w-full h-full object-cover grayscale group-hover:scale-[1.02] transition-transform duration-500" data-alt="Editorial atmospheric photograph in black and white showing two small silhouetted figures walking alongside sheer basalt sea cliff formations. Heavy sea fog obscures the background, creating tonal aerial perspective from deep black foreground rocks to ethereal pale white distant vapors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdcJeGSu_U6ZiPCVWzV_FVtfBy0R6TT0_Av_z0E88-bh-RkiWkWYEwy9BvFIuNmyZsFZOudEghlP2U2V5KWBUG3WdcxoyjDpJkBgq7M0O1sVaPEKC6T-aT4SEmj_xx_Cy-pd3qj3T-NJpbHe53Qq22Fu4kqjSTwFCTVQkAu9FawzZV5a7-UkX2Osl1wvP0u194DWie7BaC8Kbd2x2eoEdVfNT36Q4c-X-fiG_WiJx95wayV1D41AhlXMFll_pg6INf-5uHapjrhA"/>
+<div class="absolute inset-0 bg-ink/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="px-3 py-1.5 bg-surface text-ink font-label-mono text-label-mono text-xs uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="zoom_in">zoom_in</span> [ + EXPAND ]
+            </span>
+</div>
+<div class="absolute top-2 left-2 bg-ink/80 text-surface font-label-mono text-[10px] px-1.5 py-0.5 uppercase tracking-widest backdrop-blur-xs">
+            PLATE 06/42
+          </div>
+</div>
+<div class="pt-3 pb-1 px-1">
+<div class="flex items-center justify-between font-label-mono text-[11px] text-muted tracking-tight border-b border-line pb-1.5 mb-1.5">
+<span>35MM · F/2.8 · 1/500S · ISO 400</span>
+<span class="text-photo-accent font-medium uppercase">HP5+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-medium text-ink mb-1 text-base">Human Scale in Atlantic Spray</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Strangers silhouetted against the spray of incoming breaker sets.
+          </p>
+</div>
+</div>
+</section>
+<!-- CURATORIAL NOTES & DARKROOM COLOPHON SECTION -->
+<section class="border border-line rounded bg-surface p-6 md:p-8 mb-16">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-2">
+<div class="font-label-mono text-label-mono uppercase text-photo-accent tracking-wider mb-2">
+            DARKROOM PROCESS &amp; PRINTS
+          </div>
+<h2 class="font-headline-md text-headline-md text-ink mb-4">
+            Silver Gelatin Craftsmanship
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
+            All negatives in this portfolio were captured on mechanical 35mm rangefinders using natural North Atlantic ambient lighting. Silver gelatin prints exposed under De Vere 504 enlarger. Ilford Multigrade FB Warmtone Baryta 310gsm paper processed in archival two-bath fixer and Selenium toned 1:19 for shadow depth and longevity.
+          </p>
+<div class="flex flex-wrap gap-4 text-xs font-label-mono text-muted">
+<span class="border border-line px-2 py-1 rounded">BARYTA 310GSM</span>
+<span class="border border-line px-2 py-1 rounded">SELENIUM TONED</span>
+<span class="border border-line px-2 py-1 rounded">DE VERE 504 COLD CATHODE</span>
+<span class="border border-line px-2 py-1 rounded">LIMITED NUMBERED PORTFOLIO</span>
+</div>
+</div>
+<div class="border-t md:border-t-0 md:border-l border-line pt-6 md:pt-0 md:pl-8 flex flex-col justify-between">
+<div>
+<div class="font-label-mono text-label-mono uppercase text-muted tracking-wider mb-2">
+              ACQUISITION &amp; INQUIRY
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Individual contact sheets and 11x14" darkroom master proofs available for private collector acquisition.
+            </p>
+<div class="font-label-mono text-xs text-ink font-semibold mb-1">
+              CURRENT STATUS: 7/12 EDITIONS REMAINING
+            </div>
+</div>
+<a class="mt-4 inline-flex items-center justify-center px-4 py-2.5 bg-ink text-surface font-label-mono text-xs uppercase tracking-widest rounded hover:bg-black transition-colors text-center" href="#contact">
+            REQUEST ARCHIVE FOLIO (PDF)
+          </a>
+</div>
+</div>
+</section>
+</main>
+<!-- LIGHTBOX MODAL AFFORDANCE (Interactive Overlay) -->
+<div class="fixed inset-0 z-[100] bg-ink/90 backdrop-blur-sm hidden flex-col justify-between p-4 md:p-6 transition-opacity duration-300" id="lightbox-modal">
+<!-- Lightbox Header Bar -->
+<div class="flex items-center justify-between text-surface border-b border-surface/20 pb-3">
+<div class="flex items-center gap-3">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-photo-accent" id="lightbox-plate-id">PLATE 01/42</span>
+<span class="text-surface/40">|</span>
+<span class="font-headline-sm text-base text-surface" id="lightbox-title">Wanderers in the Mist</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-mono text-xs text-surface/70 hidden md:inline">[USE ARROW KEYS OR ESC TO CLOSE]</span>
+<button class="text-surface hover:text-photo-accent p-1 transition-colors" onclick="closeLightbox()">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+</div>
+<!-- Lightbox Center Content & Technical Sidebar -->
+<div class="flex-grow flex flex-col lg:flex-row items-center justify-center my-4 gap-6 overflow-hidden">
+<!-- Nav Button Previous -->
+<button class="hidden md:flex text-surface/70 hover:text-surface p-2 border border-surface/20 rounded hover:border-surface transition-all" onclick="prevLightbox()">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<!-- Central Frame Display -->
+<div class="relative max-h-[70vh] flex items-center justify-center overflow-hidden border border-surface/20 bg-black/40 p-2 rounded">
+<img alt="Expanded photography plate view" class="max-h-[65vh] max-w-full object-contain" id="lightbox-img" src="https://lh3.googleusercontent.com/aida/AEtjO1U_WhDePh5q1rFilI29hnbx7HrjqIJBSGGM0jDbJ292otAxAwEo2fZmecJNfi6LNv952-JMGj3de9_K0m96ffaNtjm1k30ar1258ZFzjgijcXSQWooxe7bzE0iHTHCVgQRDdaPHn3eecST-BURpHU_Hy2dvsZoOEw8VjPfh9wqRGPeduZmNrg0w-o4UGoN8qjMY7I5x1g-Bdw_yL5sa7jQI6GJmxsOlhF97gN0C96nT87bLsNkXKx_G6A"/>
+</div>
+<!-- Nav Button Next -->
+<button class="hidden md:flex text-surface/70 hover:text-surface p-2 border border-surface/20 rounded hover:border-surface transition-all" onclick="nextLightbox()">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+<!-- Technical EXIF Monospace Sidebar Drawer -->
+<div class="w-full lg:w-80 bg-surface/10 border border-surface/20 p-4 rounded text-surface font-label-mono text-xs space-y-3">
+<div class="border-b border-surface/20 pb-2 flex justify-between items-center">
+<span class="text-photo-accent font-semibold tracking-wider uppercase">TECHNICAL DOSSIER</span>
+<span class="text-surface/50 text-[10px]" id="lightbox-loc">SNÆFELLSNES, IS</span>
+</div>
+<div class="grid grid-cols-2 gap-2 text-[11px]">
+<div><span class="text-surface/50 block">CAMERA</span>Leica M6 Classic</div>
+<div><span class="text-surface/50 block">LENS</span>35mm Summicron f/2</div>
+<div><span class="text-surface/50 block">APERTURE</span>f/4.0</div>
+<div><span class="text-surface/50 block">SHUTTER</span>1/250s</div>
+<div><span class="text-surface/50 block">EMULSION</span>Ilford HP5+ 400</div>
+<div><span class="text-surface/50 block">DEVELOPER</span>Kodak D-76 (1:1)</div>
+</div>
+<div class="border-t border-surface/20 pt-2 text-[11px]">
+<span class="text-surface/50 block mb-1">DARKROOM LOG</span>
+<p class="text-surface/80 leading-relaxed font-body-sm text-xs">
+            Grade 3 multigrade filter. Split-grade burn +1.5 stops on sky foam. Toned in Selenium 1:19 for 3 minutes at 20°C.
+          </p>
+</div>
+<div class="pt-2 flex items-center justify-between text-[11px]">
+<span class="text-surface/70">SILVER GELATIN 11×14"</span>
+<span class="text-photo-accent underline cursor-pointer hover:text-white">INQUIRE</span>
+</div>
+</div>
+</div>
+<!-- Lightbox Bottom Navigation Bar (Mobile Nav Support) -->
+<div class="flex md:hidden items-center justify-between text-surface border-t border-surface/20 pt-3">
+<button class="flex items-center gap-1 text-xs font-label-mono" onclick="prevLightbox()">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span> PREV
+      </button>
+<span class="text-xs font-label-mono text-surface/60" id="lightbox-counter">1 OF 6</span>
+<button class="flex items-center gap-1 text-xs font-label-mono" onclick="nextLightbox()">
+        NEXT <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- FOOTER (Shared Component Anchor) -->
+<footer class="w-full border-t border-outline-variant/30 dark:border-outline/20 px-margin md:px-margin-desktop py-space-md flex flex-col md:flex-row justify-between items-center z-40 bg-surface dark:bg-tertiary">
+<!-- Copyright & Slogan (Verbatim Content) -->
+<div class="text-caption-code font-caption-code uppercase tracking-widest text-on-surface-variant dark:text-secondary-fixed-dim text-xs mb-4 md:mb-0">
+      © 2024 JOEPAUL THOMAS. ALL RIGHTS RESERVED. [TWO SIDES SAME FACE]
+    </div>
+<!-- Navigation Links (Verbatim Content) -->
+<div class="flex items-center space-x-6 text-secondary dark:text-secondary-fixed-dim font-caption-code text-caption-code uppercase tracking-widest text-xs">
+<a class="hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#">Index</a>
+<a class="hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#">Colophon</a>
+<a class="hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150 underline" href="#">Archive</a>
+<a class="hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#">Transmit</a>
+</div>
+</footer>
+<!-- Lightbox Script -->
+<script>
+    const plates = [
+      {
+        src: "https://lh3.googleusercontent.com/aida/AEtjO1U_WhDePh5q1rFilI29hnbx7HrjqIJBSGGM0jDbJ292otAxAwEo2fZmecJNfi6LNv952-JMGj3de9_K0m96ffaNtjm1k30ar1258ZFzjgijcXSQWooxe7bzE0iHTHCVgQRDdaPHn3eecST-BURpHU_Hy2dvsZoOEw8VjPfh9wqRGPeduZmNrg0w-o4UGoN8qjMY7I5x1g-Bdw_yL5sa7jQI6GJmxsOlhF97gN0C96nT87bLsNkXKx_G6A",
+        plate: "PLATE 01/42 · SPREAD MASTER",
+        title: "Wanderers in the Mist",
+        loc: "SNÆFELLSNES, IS",
+        shutter: "1/250s",
+        aperture: "f/4.0",
+        film: "Ilford HP5+ 400"
+      },
+      {
+        src: "placeholder",
+        plate: "PLATE 02/42",
+        title: "Reynisdrangar Sentinel",
+        loc: "VÍK Í MÝRDAL, IS",
+        shutter: "1/500s",
+        aperture: "f/8.0",
+        film: "Ilford HP5+ (Push +1)"
+      },
+      {
+        src: "placeholder",
+        plate: "PLATE 03/42",
+        title: "The White Null",
+        loc: "SNÆFELLSJÖKULL COAST, IS",
+        shutter: "1/125s",
+        aperture: "f/2.8",
+        film: "Kodak Portra 160"
+      },
+      {
+        src: "placeholder",
+        plate: "PLATE 04/42",
+        title: "Calving Remnants",
+        loc: "BREIÐAMERKURKANDUR, IS",
+        shutter: "1/125s",
+        aperture: "f/5.6",
+        film: "Ilford HP5+ 400"
+      },
+      {
+        src: "placeholder",
+        plate: "PLATE 05/42",
+        title: "Dyrhólaey Beacon",
+        loc: "DYRHÓLAEY, IS",
+        shutter: "1/60s",
+        aperture: "f/4.0",
+        film: "Kodak Portra 400"
+      },
+      {
+        src: "placeholder",
+        plate: "PLATE 06/42",
+        title: "Human Scale in Atlantic Spray",
+        loc: "REYNISFJARA, IS",
+        shutter: "1/500s",
+        aperture: "f/2.8",
+        film: "Ilford HP5+ 400"
+      }
+    ];
+
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      updateLightboxContent();
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }
+
+    function nextLightbox() {
+      currentIndex = (currentIndex + 1) % plates.length;
+      updateLightboxContent();
+    }
+
+    function prevLightbox() {
+      currentIndex = (currentIndex - 1 + plates.length) % plates.length;
+      updateLightboxContent();
+    }
+
+    function updateLightboxContent() {
+      const p = plates[currentIndex];
+      const img = document.getElementById('lightbox-img');
+      img.src = p.src;
+      document.getElementById('lightbox-plate-id').innerText = p.plate;
+      document.getElementById('lightbox-title').innerText = p.title;
+      document.getElementById('lightbox-loc').innerText = p.loc;
+      document.getElementById('lightbox-counter').innerText = `${currentIndex + 1} OF ${plates.length}`;
+    }
+
+    // Keyboard navigation
+    window.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('lightbox-modal');
+      if (!modal.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') nextLightbox();
+        if (e.key === 'ArrowLeft') prevLightbox();
+      }
+    });
+  </script>
+</body></html>
