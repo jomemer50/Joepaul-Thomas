@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aether Engine — Joepaul Thomas</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed": "#1c1b1b",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-container": "#1d1b1a",
+            "primary-fixed-dim": "#c8c6c5",
+            "primary-container": "#1c1b1b",
+            "surface": "#FFFFFF",
+            "on-secondary-fixed": "#0f0069",
+            "on-tertiary-container": "#868381",
+            "on-primary-container": "#858383",
+            "inverse-on-surface": "#f4f0ef",
+            "on-tertiary-fixed-variant": "#484645",
+            "on-tertiary-fixed": "#1d1b1a",
+            "tertiary-fixed": "#e6e1df",
+            "error": "#ba1a1a",
+            "photo-accent": "#C2410C",
+            "on-surface-variant": "#444748",
+            "on-error": "#ffffff",
+            "surface-container-low": "#f7f3f2",
+            "secondary-fixed": "#e2dfff",
+            "on-primary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "surface-bright": "#fdf8f8",
+            "on-background": "#1c1b1b",
+            "surface-tint": "#5f5e5e",
+            "inverse-surface": "#313030",
+            "surface-container-high": "#ebe7e6",
+            "secondary-fixed-dim": "#c3c0ff",
+            "tertiary": "#000000",
+            "primary-fixed": "#e5e2e1",
+            "surface-variant": "#e5e2e1",
+            "outline": "#747878",
+            "on-surface": "#1c1b1b",
+            "on-secondary": "#ffffff",
+            "inverse-primary": "#c8c6c5",
+            "error-container": "#ffdad6",
+            "surface-container-highest": "#e5e2e1",
+            "secondary": "#4b41e1",
+            "surface-container": "#f1edec",
+            "on-secondary-fixed-variant": "#3323cc",
+            "ink": "#111111",
+            "tertiary-fixed-dim": "#cac6c3",
+            "muted": "#6B7280",
+            "surface-dim": "#ddd9d8",
+            "outline-variant": "#c4c7c7",
+            "engineer-accent": "#4F46E5",
+            "on-primary-fixed-variant": "#474646",
+            "on-error-container": "#93000a",
+            "on-secondary-container": "#fffbff",
+            "primary": "#000000",
+            "background": "#fdf8f8",
+            "line": "#E7E5E4",
+            "bg": "#FAFAF9",
+            "secondary-container": "#645efb"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "margin": "2.5rem",
+            "space-xl": "4rem",
+            "space-md": "1rem",
+            "space-lg": "2rem",
+            "gutter": "2rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "label-mono": ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
+            "body-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "body-md": ["Inter"]
+          },
+          "fontSize": {
+            "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "1.3", "fontWeight": "500" }],
+            "headline-md": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-mono": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }],
+            "body-sm": ["13px", { "lineHeight": "1.5", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "1.6", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 1.25rem;
+      vertical-align: middle;
+      display: inline-block;
+      line-height: 1;
+    }
+    ::selection {
+      background-color: #111111;
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+<body class="bg-bg text-on-surface antialiased selection:bg-ink selection:text-surface min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-margin md:px-margin-desktop py-space-sm h-16 bg-surface/80 dark:bg-tertiary-container/80 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline/20 transition-colors duration-200 ease-in-out">
+<a class="text-headline-sm font-headline-sm font-semibold tracking-tighter text-on-surface dark:text-inverse-on-surface hover:opacity-80 transition-opacity" href="#">
+      JT
+    </a>
+<!-- Navigation links (active match: Software) -->
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-primary dark:text-inverse-primary font-label-md text-label-md uppercase tracking-wider hover:text-primary dark:hover:text-on-primary transition-colors duration-150" href="#">
+        Software
+      </a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-label-md text-label-md uppercase tracking-wider hover:text-primary dark:hover:text-on-primary transition-colors duration-150" href="#">
+        Frames
+      </a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-label-md text-label-md uppercase tracking-wider hover:text-primary dark:hover:text-on-primary transition-colors duration-150" href="#">
+        About
+      </a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center">
+<a class="text-caption-code font-caption-code text-body-sm font-body-sm tracking-wide px-4 py-2 border border-line bg-surface hover:bg-ink hover:text-surface transition-colors duration-150 rounded-lg" href="#contact">
+        Contact
+      </a>
+</div>
+</header>
+<!-- Main Container -->
+<main class="flex-grow pt-24 pb-20 w-full max-w-[1120px] mx-auto px-6 md:px-12">
+<!-- Sub-nav / Breadcrumb metadata bar -->
+<section class="py-6 border-b border-line flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<a class="group inline-flex items-center text-body-sm font-body-sm text-muted hover:text-ink transition-colors duration-150" href="#index">
+<span class="mr-2 text-base leading-none transition-transform group-hover:-translate-x-1 duration-150">←</span>
+<span>All Systems / Index</span>
+</a>
+<div class="font-label-mono text-label-mono text-muted tracking-wider">
+        [ SYS.01 // CASE STUDY // REV.2024.Q4 ]
+      </div>
+</section>
+<!-- Hero Section -->
+<section class="pt-12 pb-16 border-b border-line">
+<!-- Monospace Category Badge -->
+<div class="inline-flex items-center px-2.5 py-1 border border-line rounded bg-surface text-ink font-label-mono text-label-mono uppercase tracking-widest mb-6">
+<span class="w-1.5 h-1.5 rounded-full bg-engineer-accent mr-2"></span>
+        CONSENSUS CORE &amp; STREAMING SYSTEMS
+      </div>
+<!-- Headline & Subtitle -->
+<h1 class="font-headline-lg text-headline-lg text-ink tracking-tight mb-6 max-w-4xl">
+        Aether Engine: High-throughput deterministic consensus streaming under network partitions.
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed mb-10">
+        Architecting microsecond state synchronization with zero-copy deserialization and deterministic raft replication.
+      </p>
+<!-- Meta Block: 4-Column Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 p-6 border border-line bg-surface rounded-lg mb-10">
+<div>
+<div class="font-label-mono text-label-mono text-muted uppercase tracking-wider mb-1">Role</div>
+<div class="font-body-sm text-body-sm font-medium text-ink">Systems Architect &amp; Core Contributor</div>
+</div>
+<div>
+<div class="font-label-mono text-label-mono text-muted uppercase tracking-wider mb-1">Timeline</div>
+<div class="font-body-sm text-body-sm font-medium text-ink">Q1–Q3 2024 (9 Mos)</div>
+</div>
+<div>
+<div class="font-label-mono text-label-mono text-muted uppercase tracking-wider mb-1">Performance</div>
+<div class="font-body-sm text-body-sm font-medium text-engineer-accent">0.42ms p99 / 120k rps</div>
+</div>
+<div>
+<div class="font-label-mono text-label-mono text-muted uppercase tracking-wider mb-1">License &amp; Status</div>
+<div class="font-body-sm text-body-sm font-medium text-ink">Apache 2.0 // Production</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center px-5 py-2.5 bg-ink text-surface font-body-sm text-body-sm font-medium rounded-lg hover:bg-neutral-800 transition-colors duration-150" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>View Source on GitHub</span>
+<span class="ml-2 font-label-mono">↗</span>
+</a>
+<a class="inline-flex items-center px-5 py-2.5 bg-surface text-ink border border-line font-body-sm text-body-sm font-medium rounded-lg hover:border-ink transition-colors duration-150" href="#architecture-rfc">
+<span>Read Architecture RFC</span>
+<span class="ml-2 font-label-mono">↗</span>
+</a>
+</div>
+</section>
+<!-- Tech Stack Tag Cloud -->
+<section class="py-8 border-b border-line">
+<div class="text-muted font-label-mono text-label-mono uppercase tracking-widest mb-4">Core Technologies &amp; Protocol Primitives</div>
+<div class="flex flex-wrap gap-2.5">
+<span class="px-3 py-1.5 border border-line bg-surface rounded text-ink font-label-mono text-label-mono tracking-wide">[ Rust ]</span>
+<span class="px-3 py-1.5 border border-line bg-surface rounded text-ink font-label-mono text-label-mono tracking-wide">[ Raft Consensus ]</span>
+<span class="px-3 py-1.5 border border-line bg-surface rounded text-ink font-label-mono text-label-mono tracking-wide">[ Tokio Async ]</span>
+<span class="px-3 py-1.5 border border-line bg-surface rounded text-ink font-label-mono text-label-mono tracking-wide">[ WebSockets ]</span>
+<span class="px-3 py-1.5 border border-line bg-surface rounded text-ink font-label-mono text-label-mono tracking-wide">[ Zero-Copy FlatBuffers ]</span>
+<span class="px-3 py-1.5 border border-line bg-surface rounded text-ink font-label-mono text-label-mono tracking-wide">[ SIMD Parsing ]</span>
+<span class="px-3 py-1.5 border border-line bg-surface rounded text-ink font-label-mono text-label-mono tracking-wide">[ eBPF Telemetry ]</span>
+</div>
+</section>
+<!-- Two-Column Problem & Solution Section -->
+<section class="py-16 border-b border-line">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Left: The Problem -->
+<div class="flex flex-col space-y-6">
+<div class="inline-flex items-center text-muted font-label-mono text-label-mono tracking-wider">
+<span>SECTION 01 // ANALYSIS</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-ink tracking-tight">
+            The Architectural Bottleneck / Problem
+          </h2>
+<div class="space-y-4 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+              In distributed ledger and real-time multiplayer coordination topologies, commodity consensus engines suffer severe throughput collapse during asymmetric packet loss. Traditional Raft and Paxos implementations synchronize entire disk batches sequentially, triggering widespread <strong class="text-ink font-medium">head-of-line blocking</strong> whenever a single peer experiences transient buffer bloat.
+            </p>
+<p>
+              Serialization mechanisms like standard JSON or protocol buffers incur constant heap allocations during decode loops, driving cross-datacenter 99th percentile latencies from a baseline of 4ms to catastrophic bursts of 120ms+.
+            </p>
+</div>
+<div class="p-6 border border-line bg-surface-container-low rounded-lg space-y-3">
+<div class="font-label-mono text-label-mono text-error uppercase tracking-wider flex items-center">
+<span class="w-2 h-2 rounded-full bg-error mr-2"></span>
+              Failure Profile Under Asymmetric Drops
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Cross-region heartbeat jitter causing spurious leader election cycles, memory lock contention across Tokio runtime threads, and uncoordinated garbage sweeps.
+            </p>
+</div>
+</div>
+<!-- Right: The Solution -->
+<div class="flex flex-col space-y-6">
+<div class="inline-flex items-center text-engineer-accent font-label-mono text-label-mono tracking-wider">
+<span>SECTION 02 // SYNTHESIS</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-ink tracking-tight">
+            The Deterministic Engine / Solution
+          </h2>
+<div class="space-y-4 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+              Aether Engine enforces a <strong class="text-ink font-medium">lockless ring-buffer transaction pipeline</strong> written natively in Rust. Incoming event frames map directly onto shared memory regions using FlatBuffers with zero heap reallocation, bypassing traditional serde overhead entirely.
+            </p>
+<p>
+              State replication uses an asynchronous, deterministic tick sequencer coupled with an internal simulated virtual network driver. Under 40% randomized network drops, state-machine replicas converge reliably within a singular round-trip cycle without electing phantom leaders.
+            </p>
+</div>
+<div class="p-6 border border-line bg-surface-container-low rounded-lg space-y-3">
+<div class="font-label-mono text-label-mono text-engineer-accent uppercase tracking-wider flex items-center">
+<span class="w-2 h-2 rounded-full bg-engineer-accent mr-2"></span>
+              Architectural Invariant
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Every committed state change is guaranteed bitwise-identical across all nodes irrespective of ingestion order or operating system scheduling delays.
+            </p>
+</div>
+</div>
+</div>
+<!-- Key Metrics Callout Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 pt-12 border-t border-line">
+<div class="p-6 border border-line bg-surface rounded-lg">
+<div class="font-label-mono text-label-mono text-muted uppercase tracking-wider mb-2">Tail Latency Reduction</div>
+<div class="font-headline-md text-headline-md font-semibold text-ink mb-1">-78%</div>
+<p class="font-body-sm text-body-sm text-muted">p99 latency flattened from 1.95ms to 0.42ms in peak stress conditions.</p>
+</div>
+<div class="p-6 border border-line bg-surface rounded-lg">
+<div class="font-label-mono text-label-mono text-muted uppercase tracking-wider mb-2">Throughput Density</div>
+<div class="font-headline-md text-headline-md font-semibold text-ink mb-1">120,000</div>
+<p class="font-body-sm text-body-sm text-muted">Committed transactions per second on single-socket commodity hardware.</p>
+</div>
+<div class="p-6 border border-line bg-surface rounded-lg">
+<div class="font-label-mono text-label-mono text-muted uppercase tracking-wider mb-2">Partition Durability</div>
+<div class="font-headline-md text-headline-md font-semibold text-ink mb-1">0 Loss</div>
+<p class="font-body-sm text-body-sm text-muted">Zero frame corruption or dropped states under sustained 40% packet drops.</p>
+</div>
+</div>
+</section>
+<!-- Dark Code Block Section -->
+<section class="py-16 border-b border-line">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4">
+<div>
+<div class="text-muted font-label-mono text-label-mono uppercase tracking-widest mb-1">Source Implementation</div>
+<h2 class="font-headline-md text-headline-md text-ink">Deterministic State Machine Dispatch</h2>
+</div>
+<div class="font-body-sm text-body-sm text-muted">
+          Memory safety through single-ownership ring buffers
+        </div>
+</div>
+<!-- Code Window Surface -->
+<div class="border border-line rounded-lg overflow-hidden bg-tertiary text-surface font-label-mono text-body-sm">
+<!-- Window Chrome / Header -->
+<div class="flex items-center justify-between px-4 py-3 bg-tertiary-container border-b border-on-tertiary-container/20">
+<div class="flex items-center space-x-3">
+<div class="flex space-x-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-neutral-600"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-neutral-600"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-neutral-600"></div>
+</div>
+<span class="text-on-primary-container font-label-mono text-label-mono">src/consensus/state_machine.rs</span>
+</div>
+<div class="flex items-center space-x-4">
+<span class="px-2 py-0.5 border border-on-tertiary-container/30 rounded text-[11px] text-on-primary-container uppercase">Rust</span>
+<button class="text-[11px] text-on-tertiary-container hover:text-surface transition-colors" onclick="navigator.clipboard.writeText('// Copied state machine code'); this.innerText='Copied';">
+              Copy
+            </button>
+</div>
+</div>
+<!-- Code Snippet -->
+<pre class="p-6 overflow-x-auto text-[13px] leading-relaxed text-zinc-300 font-label-mono"><code><span class="text-neutral-500">// Direct zero-copy mutation loop for committed raft log frames</span>
+<span class="text-purple-400">pub struct</span> <span class="text-yellow-200">AetherStateMachine</span>&lt;<span class="text-cyan-300">'a</span>, S: <span class="text-yellow-200">StorageEngine</span>&gt; {
+    ring: <span class="text-yellow-200">Arc</span>&lt;<span class="text-yellow-200">LocklessRingBuffer</span>&lt;<span class="text-yellow-200">RawFrame</span>&lt;<span class="text-cyan-300">'a</span>&gt;&gt;&gt;,
+    state: <span class="text-yellow-200">Arc</span>&lt;<span class="text-yellow-200">RwLock</span>&lt;<span class="text-yellow-200">DeterministicState</span>&gt;&gt;,
+    storage: S,
+}
+
+<span class="text-purple-400">impl</span>&lt;<span class="text-cyan-300">'a</span>, S&gt; <span class="text-yellow-200">AetherStateMachine</span>&lt;<span class="text-cyan-300">'a</span>, S&gt; 
+<span class="text-purple-400">where</span> 
+    S: <span class="text-yellow-200">StorageEngine</span> + <span class="text-yellow-200">Send</span> + <span class="text-yellow-200">Sync</span> + <span class="text-cyan-300">'static</span>,
+{
+    <span class="text-purple-400">#[inline(always)]</span>
+    <span class="text-purple-400">pub async fn</span> <span class="text-blue-400">dispatch_committed_batch</span>(
+        &amp;<span class="text-purple-400">mut</span> <span class="text-red-300">self</span>, 
+        <span class="text-red-300">entries</span>: &amp;[<span class="text-yellow-200">RaftLogEntry</span>&lt;<span class="text-cyan-300">'a</span>&gt;]
+    ) -&gt; <span class="text-yellow-200">Result</span>&lt;<span class="text-yellow-200">CheckpointHash</span>, <span class="text-yellow-200">ConsensusError</span>&gt; {
+        <span class="text-purple-400">let mut</span> batch_digest = <span class="text-yellow-200">Blake3Hasher</span>::new();
+
+        <span class="text-purple-400">for</span> entry <span class="text-purple-400">in</span> entries.iter() {
+            <span class="text-neutral-500">// Zero-copy slice conversion directly from DMA buffer</span>
+            <span class="text-purple-400">let</span> payload = entry.as_flatbuffer_view()?;
+            
+            <span class="text-neutral-500">// Deterministic execution guarantees state isomorphism</span>
+            <span class="text-purple-400">let</span> transition = <span class="text-red-300">self</span>.state.write().apply_deterministic(payload);
+            batch_digest.update(transition.digest());
+        }
+
+        <span class="text-red-300">self</span>.storage.flush_batch_async(entries).<span class="text-purple-400">await</span>?;
+        <span class="text-yellow-200">Ok</span>(batch_digest.finalize().into())
+    }
+}</code></pre>
+</div>
+<!-- Annotation Notes Beneath Code -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+<div class="p-4 border border-line bg-surface rounded-lg">
+<span class="font-label-mono text-label-mono text-ink font-semibold block mb-1">01 // Zero Heap Reallocations</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Data payload slices map via DMA memory regions directly into the Raft execution register without deserialization passes or GC traversal.
+          </p>
+</div>
+<div class="p-4 border border-line bg-surface rounded-lg">
+<span class="font-label-mono text-label-mono text-ink font-semibold block mb-1">02 // Isomorphic Checksumming</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            A Blake3 streaming state digest is calculated in parallel using AVX-512 SIMD vector extensions, preserving real-time consensus validation.
+          </p>
+</div>
+</div>
+</section>
+<!-- Prev / Next Project Footer Navigation -->
+<nav class="py-12 flex flex-col sm:flex-row justify-between items-center gap-6 border-b border-line">
+<a class="group flex flex-col items-start space-y-1 hover:opacity-80 transition-opacity" href="#prism">
+<span class="font-label-mono text-label-mono text-muted uppercase tracking-wider">Previous System</span>
+<span class="font-body-md text-body-md font-medium text-ink group-hover:underline">
+          ← Prism Protocol (ZK Cryptography)
+        </span>
+</a>
+<a class="group flex flex-col sm:items-end items-start space-y-1 hover:opacity-80 transition-opacity" href="#kinesis">
+<span class="font-label-mono text-label-mono text-muted uppercase tracking-wider">Next System</span>
+<span class="font-body-md text-body-md font-medium text-ink group-hover:underline">
+          Kinesis UI (Interface Compiler) →
+        </span>
+</a>
+</nav>
+</main>
+<!-- Global Footer (Shared Component) -->
+<footer class="w-full border-t border-outline-variant/30 dark:border-outline/20 px-margin md:px-margin-desktop py-space-md flex flex-col md:flex-row justify-between items-center z-40 bg-surface dark:bg-tertiary">
+<div class="text-caption-code font-caption-code uppercase tracking-widest text-on-surface-variant dark:text-secondary-fixed-dim text-body-sm mb-4 md:mb-0">
+      © 2024 JOEPAUL THOMAS. ALL RIGHTS RESERVED. [TWO SIDES SAME FACE]
+    </div>
+<!-- Navigation links from JSON -->
+<div class="flex items-center space-x-6">
+<a class="text-on-surface dark:text-inverse-on-surface underline font-caption-code text-caption-code uppercase tracking-widest hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#index">
+        Index
+      </a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-caption-code text-caption-code uppercase tracking-widest hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#colophon">
+        Colophon
+      </a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-caption-code text-caption-code uppercase tracking-widest hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#archive">
+        Archive
+      </a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-caption-code text-caption-code uppercase tracking-widest hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#transmit">
+        Transmit
+      </a>
+</div>
+</footer>
+</body></html>

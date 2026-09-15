@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JT — Frames // Visual Archive</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-background": "#1c1b1b",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#c3c0ff",
+            "on-secondary-fixed": "#0f0069",
+            "surface-variant": "#e5e2e1",
+            "surface-tint": "#5f5e5e",
+            "secondary-fixed": "#e2dfff",
+            "bg": "#FAFAF9",
+            "primary-fixed-dim": "#c8c6c5",
+            "ink": "#111111",
+            "secondary": "#4b41e1",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed-dim": "#cac6c3",
+            "surface-container-highest": "#e5e2e1",
+            "outline-variant": "#c4c7c7",
+            "tertiary-fixed": "#e6e1df",
+            "surface-container-high": "#ebe7e6",
+            "tertiary": "#000000",
+            "on-primary-fixed": "#1c1b1b",
+            "on-tertiary-container": "#868381",
+            "surface": "#FFFFFF",
+            "on-surface": "#1c1b1b",
+            "engineer-accent": "#4F46E5",
+            "on-secondary-fixed-variant": "#3323cc",
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "on-primary-fixed-variant": "#474646",
+            "primary": "#000000",
+            "outline": "#747878",
+            "surface-dim": "#ddd9d8",
+            "line": "#E7E5E4",
+            "primary-container": "#1c1b1b",
+            "inverse-surface": "#313030",
+            "tertiary-container": "#1d1b1a",
+            "on-tertiary-fixed-variant": "#484645",
+            "on-tertiary-fixed": "#1d1b1a",
+            "on-primary-container": "#858383",
+            "muted": "#6B7280",
+            "surface-container-lowest": "#ffffff",
+            "surface-bright": "#fdf8f8",
+            "on-primary": "#ffffff",
+            "background": "#fdf8f8",
+            "photo-accent": "#C2410C",
+            "on-surface-variant": "#444748",
+            "inverse-on-surface": "#f4f0ef",
+            "on-error": "#ffffff",
+            "surface-container": "#f1edec",
+            "on-secondary-container": "#fffbff",
+            "inverse-primary": "#c8c6c5",
+            "on-secondary": "#ffffff",
+            "surface-container-low": "#f7f3f2",
+            "primary-fixed": "#e5e2e1",
+            "secondary-container": "#645efb"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "gutter": "2rem",
+            "space-lg": "2rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "margin": "2.5rem",
+            "space-xl": "4rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "headline-md": ["Space Grotesk"],
+            "label-mono": ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
+            "body-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "body-md": ["Inter"],
+            "headline-sm": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "headline-md": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "label-mono": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }],
+            "body-sm": ["13px", { "lineHeight": "1.5", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-md": ["15px", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "1.3", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+    body {
+      background-color: #FAFAF9;
+      color: #111111;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+  </style>
+</head>
+<body class="bg-bg text-ink min-h-screen flex flex-col font-body-md text-body-md antialiased selection:bg-photo-accent selection:text-white">
+<!-- TopNavBar (Shared Component from JSON) -->
+<header class="bg-surface/80 dark:bg-tertiary-container/80 backdrop-blur-md fixed top-0 left-0 w-full z-50 flex items-center justify-between px-margin md:px-margin-desktop py-space-sm h-16 border-b border-outline-variant/30 dark:border-outline/20">
+<div class="flex items-center gap-8">
+<a class="text-headline-sm font-headline-sm font-semibold tracking-tighter text-on-surface dark:text-inverse-on-surface" href="#">JT</a>
+<span class="hidden sm:inline-block font-label-mono text-label-mono text-muted uppercase tracking-wider">/ VISUAL ARCHIVE</span>
+</div>
+<!-- Active item determined: 'Frames' is the exact topic of this page -->
+<nav class="flex items-center space-x-6 md:space-x-8">
+<a class="text-secondary dark:text-secondary-fixed-dim font-label-md text-label-md uppercase tracking-wider hover:text-primary dark:hover:text-on-primary transition-colors duration-150" href="#">Software</a>
+<a class="text-primary dark:text-inverse-primary font-label-md text-label-md uppercase tracking-wider border-b-2 border-photo-accent pb-0.5" href="#">Frames</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-label-md text-label-md uppercase tracking-wider hover:text-primary dark:hover:text-on-primary transition-colors duration-150" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="bg-ink text-white font-label-mono text-label-mono uppercase px-4 py-2 rounded transition-all duration-150 hover:bg-black flex items-center gap-2" href="#contact">
+<span>Contact</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</header>
+<!-- Main Content Container -->
+<main class="flex-grow w-full max-w-[1120px] mx-auto px-4 sm:px-6 md:px-8 pt-28 pb-20">
+<!-- Hero / Intro Header Section -->
+<section class="border-b border-line pb-12 mb-16">
+<div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-photo-accent animate-pulse"></span>
+<span class="font-label-mono text-label-mono tracking-widest text-photo-accent font-semibold">[ VOL.02 // VISUAL ARCHIVE ]</span>
+<span class="text-muted font-label-mono text-label-mono">•</span>
+<span class="font-label-mono text-label-mono text-muted tracking-wider">[ ANALOG &amp; MEDIUM FORMAT ]</span>
+</div>
+<div class="font-label-mono text-label-mono text-muted tracking-wider">
+          SERIES 2022 — 2024
+        </div>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-ink tracking-tight mb-4">
+        Frames<span class="text-photo-accent">.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-muted max-w-2xl leading-relaxed">
+        coasts, cities, strangers — documenting quiet monumentality through 35mm and medium format silver halide.
+      </p>
+<!-- Sub-collection Stats Indicator Bar -->
+<div class="mt-8 pt-6 border-t border-line flex flex-wrap items-center justify-between gap-4 font-label-mono text-label-mono text-muted">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="text-ink font-semibold">TOTAL EXPOSURES:</span>
+<span class="bg-surface px-2 py-0.5 border border-line rounded text-ink">142</span>
+</div>
+<div class="hidden sm:flex items-center gap-2">
+<span class="text-ink font-semibold">CURATED SERIES:</span>
+<span class="bg-surface px-2 py-0.5 border border-line rounded text-ink">03 ACTIVE</span>
+</div>
+<div class="hidden md:flex items-center gap-2">
+<span class="text-ink font-semibold">PRINT STATUS:</span>
+<span class="text-photo-accent flex items-center gap-1">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-photo-accent"></span>
+              ARCHIVAL INQUIRIES OPEN
+            </span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 text-ink bg-surface border border-line hover:border-photo-accent rounded transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+<span>CHRONOLOGICAL</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Editorial Album Showcase Section -->
+<div class="space-y-20">
+<!-- ALBUM 01: The Quiet Coast, Vol. I (Features user photo placeholder https://lh3.googleusercontent.com/aida/AEtjO1U_WhDePh5q1rFilI29hnbx7HrjqIJBSGGM0jDbJ292otAxAwEo2fZmecJNfi6LNv952-JMGj3de9_K0m96ffaNtjm1k30ar1258ZFzjgijcXSQWooxe7bzE0iHTHCVgQRDdaPHn3eecST-BURpHU_Hy2dvsZoOEw8VjPfh9wqRGPeduZmNrg0w-o4UGoN8qjMY7I5x1g-Bdw_yL5sa7jQI6GJmxsOlhF97gN0C96nT87bLsNkXKx_G6A) -->
+<article class="bg-surface border border-line rounded p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-photo-accent/60 group">
+<div class="flex flex-col lg:flex-row gap-8 items-stretch">
+<!-- Image Container with Book-like Editorial Frame -->
+<div class="w-full lg:w-7/12 relative overflow-hidden bg-surface-container-high border border-line/80 rounded aspect-[4/3] flex items-center justify-center">
+<img alt="The Quiet Coast, Vol. 1 - Wanderers in the Mist, 35mm film photograph of ocean coastline and basalt sea rocks" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]" src="https://lh3.googleusercontent.com/aida/AEtjO1U_WhDePh5q1rFilI29hnbx7HrjqIJBSGGM0jDbJ292otAxAwEo2fZmecJNfi6LNv952-JMGj3de9_K0m96ffaNtjm1k30ar1258ZFzjgijcXSQWooxe7bzE0iHTHCVgQRDdaPHn3eecST-BURpHU_Hy2dvsZoOEw8VjPfh9wqRGPeduZmNrg0w-o4UGoN8qjMY7I5x1g-Bdw_yL5sa7jQI6GJmxsOlhF97gN0C96nT87bLsNkXKx_G6A"/>
+<div class="absolute top-4 left-4 bg-ink/80 backdrop-blur-sm text-white font-label-mono text-[11px] px-2.5 py-1 rounded border border-white/20 uppercase tracking-widest">
+              PLATE NO. 01
+            </div>
+<div class="absolute bottom-4 right-4 bg-surface/90 backdrop-blur-sm text-ink font-label-mono text-[11px] px-2 py-1 rounded border border-line uppercase">
+              35MM HP5+
+            </div>
+</div>
+<!-- Editorial Content & Technical Metadata -->
+<div class="w-full lg:w-5/12 flex flex-col justify-between py-1">
+<div>
+<!-- Metadata Header Tags -->
+<div class="flex flex-wrap items-center gap-2 mb-4 font-label-mono text-label-mono">
+<span class="px-2 py-0.5 bg-photo-accent/10 text-photo-accent border border-photo-accent/30 rounded font-semibold">
+                  VOL. I
+                </span>
+<span class="text-muted">•</span>
+<span class="text-muted tracking-wider">OCTOBER 2023</span>
+</div>
+<!-- Title -->
+<h2 class="font-headline-md text-headline-md text-ink tracking-tight mb-3">
+                The Quiet Coast, Vol. I
+              </h2>
+<!-- Monospace Technical Ledger -->
+<div class="my-4 py-3 border-y border-line space-y-2 font-label-mono text-label-mono text-muted">
+<div class="flex justify-between items-center">
+<span class="uppercase tracking-wider">LOC:</span>
+<span class="text-ink font-medium">VÍK &amp; SNÆFELLSNES, ICELAND</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="uppercase tracking-wider">COUNT:</span>
+<span class="text-ink font-medium">42 EXPOSURES</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="uppercase tracking-wider">FILM:</span>
+<span class="text-ink font-medium">ILFORD HP5+ / PORTRA 400</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="uppercase tracking-wider">OPTIC:</span>
+<span class="text-ink font-medium">35MM F/2 SUMMICRON</span>
+</div>
+</div>
+<!-- Editorial Note -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+                “Basalt fractures, freezing sea spray, and distant silhouettes disappearing into North Atlantic fog. The land breathes at a geologic cadence entirely untouched by the frantic velocity of modern tools.”
+              </p>
+</div>
+<!-- Action Link -->
+<div class="pt-4 flex items-center justify-between">
+<a class="inline-flex items-center gap-3 font-label-mono text-label-mono tracking-widest text-ink group-hover:text-photo-accent font-semibold transition-colors" href="#">
+<span>OPEN ARCHIVE // 42 FRAMES</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+<span class="font-label-mono text-[11px] text-muted uppercase">EST. READ: 6 MIN</span>
+</div>
+</div>
+</div>
+</article>
+<!-- ALBUM 02: Kyoto Nocturne: Twilight Silhouettes -->
+<article class="bg-surface border border-line rounded p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-photo-accent/60 group">
+<div class="flex flex-col lg:flex-row-reverse gap-8 items-stretch">
+<!-- Image Container -->
+<div class="w-full lg:w-7/12 relative overflow-hidden bg-surface-container-high border border-line/80 rounded aspect-[4/3] flex items-center justify-center">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]" data-alt="Moody 35mm film photograph taken during twilight in a quiet rainy Kyoto alleyway in Gion. Wet cobblestones reflect the warm incandescent glow of paper chochin lanterns outside traditional timber machiya townhouses. A solitary dark silhouette walks beneath an open umbrella into the vanishing point of misty sodium evening light, framed with rich cinematic grain and deep shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWvtAw1vtQyv9w7K1SxCxpXjBIVObNQeDUcn-OMKjxHYH9FUPSxHs7S9tpVJzwX0r-AlYgXE0IPQn420uzMDzlCmqoZP0bRT0oxvrgkRE86jLxGJfn43BSI1qV171ZwxLmkv_Oa3kYUPZIXtHaLpgh5BwC3nn3jMOfcl1tMxAQT0-gPwK7nuoe_WuB9qYZem8EDdk8dapiRRbhcPtAb3nErxpt3H1JydylDrFN-14MLX2Y_YwyIT9XKhO7s_ndQgpf2H0pwHE4BA"/>
+<div class="absolute top-4 left-4 bg-ink/80 backdrop-blur-sm text-white font-label-mono text-[11px] px-2.5 py-1 rounded border border-white/20 uppercase tracking-widest">
+              PLATE NO. 02
+            </div>
+<div class="absolute bottom-4 right-4 bg-surface/90 backdrop-blur-sm text-ink font-label-mono text-[11px] px-2 py-1 rounded border border-line uppercase">
+              CINESTILL 800T
+            </div>
+</div>
+<!-- Editorial Content & Technical Metadata -->
+<div class="w-full lg:w-5/12 flex flex-col justify-between py-1">
+<div>
+<!-- Metadata Header Tags -->
+<div class="flex flex-wrap items-center gap-2 mb-4 font-label-mono text-label-mono">
+<span class="px-2 py-0.5 bg-photo-accent/10 text-photo-accent border border-photo-accent/30 rounded font-semibold">
+                  SERIES 02
+                </span>
+<span class="text-muted">•</span>
+<span class="text-muted tracking-wider">NOVEMBER 2023</span>
+</div>
+<!-- Title -->
+<h2 class="font-headline-md text-headline-md text-ink tracking-tight mb-3">
+                Kyoto Nocturne: Twilight Silhouettes
+              </h2>
+<!-- Monospace Technical Ledger -->
+<div class="my-4 py-3 border-y border-line space-y-2 font-label-mono text-label-mono text-muted">
+<div class="flex justify-between items-center">
+<span class="uppercase tracking-wider">LOC:</span>
+<span class="text-ink font-medium">KYOTO &amp; UJI, JAPAN</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="uppercase tracking-wider">COUNT:</span>
+<span class="text-ink font-medium">38 EXPOSURES</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="uppercase tracking-wider">FILM:</span>
+<span class="text-ink font-medium">CINESTILL 800T (HALATION)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="uppercase tracking-wider">OPTIC:</span>
+<span class="text-ink font-medium">50MM F/1.4 PLANAR</span>
+</div>
+</div>
+<!-- Editorial Note -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+                “Translucent damp dusk, sodium vapor reflections, and the quiet geometry of machiya wooden facades. Red halation fringing street lamps while rain coats the slate paving stones in mirrors of quiet reflection.”
+              </p>
+</div>
+<!-- Action Link -->
+<div class="pt-4 flex items-center justify-between">
+<a class="inline-flex items-center gap-3 font-label-mono text-label-mono tracking-widest text-ink group-hover:text-photo-accent font-semibold transition-colors" href="#">
+<span>OPEN ARCHIVE // 38 FRAMES</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+<span class="font-label-mono text-[11px] text-muted uppercase">EST. READ: 4 MIN</span>
+</div>
+</div>
+</div>
+</article>
+<!-- ALBUM 03: High Desert & Brutalist Voids -->
+<article class="bg-surface border border-line rounded p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-photo-accent/60 group">
+<div class="flex flex-col lg:flex-row gap-8 items-stretch">
+<!-- Image Container -->
+<div class="w-full lg:w-7/12 relative overflow-hidden bg-surface-container-high border border-line/80 rounded aspect-[4/3] flex items-center justify-center">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]" data-alt="High-contrast medium format black-and-white analog landscape photograph of an arid salt flat basin flanked by monolithic brutalist rock formations in the Mojave Desert. Extreme raking late-afternoon sunlight casts crisp black geometric shadows across cracked dry clay earth, showcasing pure silence, stark minimalist textures, and an expansive cloudless desert horizon." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxeeHpHDVjxSsu2QF2HdfygRWvoUl80mYK3_U4fZb9KO-THEiiFcguv9GBN6q5Wtal4tXSvMNUD-MnH-4ViEPfijlS84mKtThrSFKnCEPOlQSRzZ3ak9Vs2NEFnEn3M46fIRLDC0lyM8kpGRf2WYRVoNIcAVfL6bF1InelkNgJatQWkFugd620yR9dlTDCbWJZ6Qgu5lP1_gr5I0851swoeDx_WFHPHAK4cH452eKfwMPsb_m_XC27mBzQly8nEzOtPMA1Zkjszg"/>
+<div class="absolute top-4 left-4 bg-ink/80 backdrop-blur-sm text-white font-label-mono text-[11px] px-2.5 py-1 rounded border border-white/20 uppercase tracking-widest">
+              PLATE NO. 03
+            </div>
+<div class="absolute bottom-4 right-4 bg-surface/90 backdrop-blur-sm text-ink font-label-mono text-[11px] px-2 py-1 rounded border border-line uppercase">
+              TRI-X 400 (6x7)
+            </div>
+</div>
+<!-- Editorial Content & Technical Metadata -->
+<div class="w-full lg:w-5/12 flex flex-col justify-between py-1">
+<div>
+<!-- Metadata Header Tags -->
+<div class="flex flex-wrap items-center gap-2 mb-4 font-label-mono text-label-mono">
+<span class="px-2 py-0.5 bg-photo-accent/10 text-photo-accent border border-photo-accent/30 rounded font-semibold">
+                  SERIES 03
+                </span>
+<span class="text-muted">•</span>
+<span class="text-muted tracking-wider">MARCH 2024</span>
+</div>
+<!-- Title -->
+<h2 class="font-headline-md text-headline-md text-ink tracking-tight mb-3">
+                High Desert &amp; Brutalist Voids
+              </h2>
+<!-- Monospace Technical Ledger -->
+<div class="my-4 py-3 border-y border-line space-y-2 font-label-mono text-label-mono text-muted">
+<div class="flex justify-between items-center">
+<span class="uppercase tracking-wider">LOC:</span>
+<span class="text-ink font-medium">MOJAVE &amp; ATACAMA</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="uppercase tracking-wider">COUNT:</span>
+<span class="text-ink font-medium">26 EXPOSURES</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="uppercase tracking-wider">FILM:</span>
+<span class="text-ink font-medium">KODAK TRI-X 400 PUSHED +1</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="uppercase tracking-wider">OPTIC:</span>
+<span class="text-ink font-medium">80MM F/2.8 SEKOR C</span>
+</div>
+</div>
+<!-- Editorial Note -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+                “Monolithic rock masses, geometric sun-bleached horizons, and pure stillness under open sky. The medium format negatives reveal micro-fractures in granite baked under thermal silence.”
+              </p>
+</div>
+<!-- Action Link -->
+<div class="pt-4 flex items-center justify-between">
+<a class="inline-flex items-center gap-3 font-label-mono text-label-mono tracking-widest text-ink group-hover:text-photo-accent font-semibold transition-colors" href="#">
+<span>OPEN ARCHIVE // 26 FRAMES</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+<span class="font-label-mono text-[11px] text-muted uppercase">EST. READ: 3 MIN</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Archival Print Inquiry & Technical Colophon Bento -->
+<section class="mt-20 pt-16 border-t border-line" id="contact">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface border border-line p-6 rounded flex flex-col justify-between">
+<div>
+<span class="font-label-mono text-label-mono text-photo-accent uppercase tracking-wider font-semibold">[ EDITION NOTICE ]</span>
+<h3 class="font-headline-sm text-headline-sm text-ink mt-2 mb-3">Archival Silver Gelatin</h3>
+<p class="font-body-sm text-body-sm text-muted">
+              Limited editions printed on Hahnemühle Baryta rag paper. Personally proofed, stamped, numbered, and embossed in editions of 15.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-line">
+<a class="font-label-mono text-label-mono text-ink hover:text-photo-accent uppercase tracking-wider flex items-center gap-1 font-semibold" href="mailto:prints@joepaulthomas.com">
+<span>Request Print Catalog</span>
+<span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+</div>
+<div class="bg-surface border border-line p-6 rounded flex flex-col justify-between">
+<div>
+<span class="font-label-mono text-label-mono text-muted uppercase tracking-wider font-semibold">[ EQUIPMENT PROFILE ]</span>
+<h3 class="font-headline-sm text-headline-sm text-ink mt-2 mb-3">Mechanical Rigs</h3>
+<ul class="font-body-sm text-body-sm text-muted space-y-1">
+<li>• Leica M6 Classic (0.72x viewfinder)</li>
+<li>• Mamiya 7II w/ 65mm &amp; 80mm lenses</li>
+<li>• Hasselblad 500 C/M w/ Carl Zeiss 80mm</li>
+<li>• Hand-developed in Kodak D-76 (1:1)</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 border-t border-line font-label-mono text-[11px] text-muted uppercase">
+            CHEMISTRY: ADOX RODINAL / TMAX DEV
+          </div>
+</div>
+<div class="bg-surface border border-line p-6 rounded flex flex-col justify-between">
+<div>
+<span class="font-label-mono text-label-mono text-muted uppercase tracking-wider font-semibold">[ DUAL DISCIPLINE ]</span>
+<h3 class="font-headline-sm text-headline-sm text-ink mt-2 mb-3">Two Sides Same Face</h3>
+<p class="font-body-sm text-body-sm text-muted">
+              Engineering rigorous distributed systems by daylight; preserving analog light and ephemeral geometry when the screens fade out.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-line">
+<a class="font-label-mono text-label-mono text-ink hover:text-photo-accent uppercase tracking-wider flex items-center gap-1 font-semibold" href="#">
+<span>Switch to Engineering →</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component from JSON) -->
+<footer class="bg-surface dark:bg-tertiary w-full border-t border-outline-variant/30 dark:border-outline/20 px-margin md:px-margin-desktop py-space-md flex flex-col md:flex-row justify-between items-center z-40 gap-4">
+<!-- Immutable copyright string from JSON -->
+<div class="text-caption-code font-caption-code uppercase tracking-widest text-on-surface-variant dark:text-secondary-fixed-dim text-center md:text-left text-xs font-label-mono">
+      © 2024 JOEPAUL THOMAS. ALL RIGHTS RESERVED. [TWO SIDES SAME FACE]
+    </div>
+<!-- Immutable links array from JSON: ["Index", "Colophon", "Archive", "Transmit"] -->
+<div class="flex items-center space-x-6">
+<a class="text-secondary dark:text-secondary-fixed-dim font-caption-code text-caption-code uppercase tracking-widest text-xs font-label-mono hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#">Index</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-caption-code text-caption-code uppercase tracking-widest text-xs font-label-mono hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#">Colophon</a>
+<a class="text-on-surface dark:text-inverse-on-surface underline text-xs font-label-mono tracking-widest uppercase" href="#">Archive</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-caption-code text-caption-code uppercase tracking-widest text-xs font-label-mono hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#">Transmit</a>
+</div>
+</footer>
+</body></html>

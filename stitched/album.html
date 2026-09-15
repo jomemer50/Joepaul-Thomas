@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Joepaul Thomas — Masonry Photo Album</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+            mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace']
+          },
+          colors: {
+            themeBg: '#FAFAF9',
+            surface: '#FFFFFF',
+            ink: '#111111',
+            muted: '#6B7280',
+            line: '#E7E5E4'
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      background-color: #FAFAF9;
+      color: #111111;
+      font-family: 'Inter', sans-serif;
+    }
+    .masonry-col-3 {
+      column-count: 1;
+      column-gap: 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .masonry-col-3 {
+        column-count: 2;
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-col-3 {
+        column-count: 3;
+      }
+    }
+    .break-inside-avoid {
+      break-inside: avoid;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#FAFAF9] text-[#111111] antialiased flex flex-col justify-between selection:bg-[#111111] selection:text-[#FFFFFF]">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-40 bg-[#FAFAF9]/90 backdrop-blur-md border-b border-[#E7E5E4]">
+<div class="max-w-[1120px] mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center space-x-6">
+<a class="font-display font-semibold text-lg tracking-tight text-[#111111]" href="#">JT</a>
+<span class="text-[#E7E5E4]">/</span>
+<span class="font-mono text-xs uppercase tracking-widest text-[#6B7280]">Frames — Series 01</span>
+</div>
+<nav class="flex items-center space-x-8 font-mono text-xs uppercase tracking-wider">
+<a class="text-[#6B7280] hover:text-[#111111] transition-colors" href="#">Software</a>
+<a class="text-[#111111] font-medium border-b border-[#111111] pb-0.5" href="#">Frames</a>
+<a class="text-[#6B7280] hover:text-[#111111] transition-colors" href="#">About</a>
+<a class="ml-4 px-3.5 py-1.5 border border-[#111111] rounded-[6px] text-[#111111] hover:bg-[#111111] hover:text-white transition-colors" href="#">Contact</a>
+</nav>
+</div>
+</header>
+<!-- Main Album Content -->
+<main class="max-w-[1120px] mx-auto px-6 py-12 flex-1 w-full">
+<!-- Header Block -->
+<section class="mb-12 border-b border-[#E7E5E4] pb-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<div class="flex items-center space-x-2 font-mono text-xs uppercase tracking-widest text-[#C2410C] mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-[#C2410C]"></span>
+<span>Monograph No. 01 • 6 Plates Selected</span>
+</div>
+<h1 class="font-display text-4xl sm:text-5xl font-semibold tracking-tight text-[#111111] leading-tight">
+            The Quiet Coast
+          </h1>
+<p class="mt-3 text-sm text-[#6B7280] max-w-xl leading-relaxed">
+            Basalt sea stacks, subarctic fog, and transient human scale along the Icelandic shore. Hand-printed on silver halide gelatin fiber paper.
+          </p>
+</div>
+<div class="font-mono text-xs text-[#6B7280] bg-white border border-[#E7E5E4] rounded-[6px] p-3 leading-relaxed shrink-0">
+<div><span class="text-[#111111] font-medium">CAMERA:</span> Hasselblad 500C/M • Leica M6</div>
+<div><span class="text-[#111111] font-medium">EMULSION:</span> Kodak Tri-X 400 • Ilford HP5+</div>
+</div>
+</div>
+</section>
+<!-- Masonry Grid with CSS Columns (Exactly 6 Photos) -->
+<div class="masonry-col-3 space-y-6">
+<!-- Photo Card 01 (Vertical / Aspect 3:4) -->
+<article class="break-inside-avoid bg-white border border-[#E7E5E4] rounded-[6px] overflow-hidden group cursor-pointer transition-all duration-200 hover:border-[#111111]" onclick="openLightbox(0)">
+<div class="relative overflow-hidden bg-[#F2F0ED] aspect-[3/4]">
+<img alt="Wanderers in the Mist" class="w-full h-full object-cover grayscale contrast-110 group-hover:scale-[1.02] transition-transform duration-300" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<span class="absolute top-3 left-3 font-mono text-[10px] tracking-widest uppercase bg-white/90 backdrop-blur-xs text-[#111111] px-2 py-0.5 rounded-[4px] border border-[#E7E5E4]">PL. 01</span>
+</div>
+<div class="p-4 border-t border-[#E7E5E4]">
+<div class="flex items-baseline justify-between mb-1">
+<h2 class="font-display text-base font-semibold text-[#111111] tracking-tight">Wanderers in the Mist</h2>
+<span class="font-mono text-[11px] text-[#6B7280]">Reynisdrangar</span>
+</div>
+<p class="text-xs text-[#6B7280] leading-relaxed mb-2.5 line-clamp-1">Solitary figures calibrated against tidal shelf and ocean mist.</p>
+<div class="font-mono text-[11px] text-[#111111]/80 pt-2 border-t border-[#F2F0ED]">
+            Hasselblad 500C/M • 80mm • f/4.0 • 1/250s • ISO 400
+          </div>
+</div>
+</article>
+<!-- Photo Card 02 (Landscape / Aspect 3:2) -->
+<article class="break-inside-avoid bg-white border border-[#E7E5E4] rounded-[6px] overflow-hidden group cursor-pointer transition-all duration-200 hover:border-[#111111]" onclick="openLightbox(1)">
+<div class="relative overflow-hidden bg-[#F2F0ED] aspect-[3/2]">
+<img alt="Basalt Organ Columns" class="w-full h-full object-cover grayscale contrast-115 group-hover:scale-[1.02] transition-transform duration-300" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<span class="absolute top-3 left-3 font-mono text-[10px] tracking-widest uppercase bg-white/90 backdrop-blur-xs text-[#111111] px-2 py-0.5 rounded-[4px] border border-[#E7E5E4]">PL. 02</span>
+</div>
+<div class="p-4 border-t border-[#E7E5E4]">
+<div class="flex items-baseline justify-between mb-1">
+<h2 class="font-display text-base font-semibold text-[#111111] tracking-tight">Basalt Organ Columns</h2>
+<span class="font-mono text-[11px] text-[#6B7280]">Vik</span>
+</div>
+<p class="text-xs text-[#6B7280] leading-relaxed mb-2.5 line-clamp-1">Hexagonal volcanic geometry shaped by sub-zero gale force winds.</p>
+<div class="font-mono text-[11px] text-[#111111]/80 pt-2 border-t border-[#F2F0ED]">
+            Leica M6 • 35mm • f/8.0 • 1/60s • ISO 100
+          </div>
+</div>
+</article>
+<!-- Photo Card 03 (Square / Aspect 1:1) -->
+<article class="break-inside-avoid bg-white border border-[#E7E5E4] rounded-[6px] overflow-hidden group cursor-pointer transition-all duration-200 hover:border-[#111111]" onclick="openLightbox(2)">
+<div class="relative overflow-hidden bg-[#F2F0ED] aspect-square">
+<img alt="Vestmannaeyjar Signal" class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-[1.02] transition-transform duration-300" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<span class="absolute top-3 left-3 font-mono text-[10px] tracking-widest uppercase bg-white/90 backdrop-blur-xs text-[#111111] px-2 py-0.5 rounded-[4px] border border-[#E7E5E4]">PL. 03</span>
+</div>
+<div class="p-4 border-t border-[#E7E5E4]">
+<div class="flex items-baseline justify-between mb-1">
+<h2 class="font-display text-base font-semibold text-[#111111] tracking-tight">Vestmannaeyjar Signal</h2>
+<span class="font-mono text-[11px] text-[#6B7280]">Heimaey</span>
+</div>
+<p class="text-xs text-[#6B7280] leading-relaxed mb-2.5 line-clamp-1">Remote clifftop beacon dissolving into impassable sea fog.</p>
+<div class="font-mono text-[11px] text-[#111111]/80 pt-2 border-t border-[#F2F0ED]">
+            Hasselblad 500C/M • 50mm • f/2.0 • 1/500s • ISO 400
+          </div>
+</div>
+</article>
+<!-- Photo Card 04 (Landscape / Aspect 16:10) -->
+<article class="break-inside-avoid bg-white border border-[#E7E5E4] rounded-[6px] overflow-hidden group cursor-pointer transition-all duration-200 hover:border-[#111111]" onclick="openLightbox(3)">
+<div class="relative overflow-hidden bg-[#F2F0ED] aspect-[16/10]">
+<img alt="Subsurface Silt" class="w-full h-full object-cover grayscale contrast-110 group-hover:scale-[1.02] transition-transform duration-300" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<span class="absolute top-3 left-3 font-mono text-[10px] tracking-widest uppercase bg-white/90 backdrop-blur-xs text-[#111111] px-2 py-0.5 rounded-[4px] border border-[#E7E5E4]">PL. 04</span>
+</div>
+<div class="p-4 border-t border-[#E7E5E4]">
+<div class="flex items-baseline justify-between mb-1">
+<h2 class="font-display text-base font-semibold text-[#111111] tracking-tight">Subsurface Silt</h2>
+<span class="font-mono text-[11px] text-[#6B7280]">Stokksnes</span>
+</div>
+<p class="text-xs text-[#6B7280] leading-relaxed mb-2.5 line-clamp-1">Volcanic black sediment dragged seaward by the tidal surge.</p>
+<div class="font-mono text-[11px] text-[#111111]/80 pt-2 border-t border-[#F2F0ED]">
+            Leica M6 • 28mm • f/5.6 • 1/125s • ISO 400
+          </div>
+</div>
+</article>
+<!-- Photo Card 05 (Vertical / Aspect 4:5) -->
+<article class="break-inside-avoid bg-white border border-[#E7E5E4] rounded-[6px] overflow-hidden group cursor-pointer transition-all duration-200 hover:border-[#111111]" onclick="openLightbox(4)">
+<div class="relative overflow-hidden bg-[#F2F0ED] aspect-[4/5]">
+<img alt="Observer on the Fjord" class="w-full h-full object-cover grayscale contrast-120 group-hover:scale-[1.02] transition-transform duration-300" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<span class="absolute top-3 left-3 font-mono text-[10px] tracking-widest uppercase bg-white/90 backdrop-blur-xs text-[#111111] px-2 py-0.5 rounded-[4px] border border-[#E7E5E4]">PL. 05</span>
+</div>
+<div class="p-4 border-t border-[#E7E5E4]">
+<div class="flex items-baseline justify-between mb-1">
+<h2 class="font-display text-base font-semibold text-[#111111] tracking-tight">Observer on the Fjord</h2>
+<span class="font-mono text-[11px] text-[#6B7280]">Seydisfjordur</span>
+</div>
+<p class="text-xs text-[#6B7280] leading-relaxed mb-2.5 line-clamp-1">An unhurried silhouette dwarfed by monolithic mountain walls.</p>
+<div class="font-mono text-[11px] text-[#111111]/80 pt-2 border-t border-[#F2F0ED]">
+            Hasselblad 500C/M • 80mm • f/2.8 • 1/1000s • ISO 400
+          </div>
+</div>
+</article>
+<!-- Photo Card 06 (Landscape / Aspect 3:2) -->
+<article class="break-inside-avoid bg-white border border-[#E7E5E4] rounded-[6px] overflow-hidden group cursor-pointer transition-all duration-200 hover:border-[#111111]" onclick="openLightbox(5)">
+<div class="relative overflow-hidden bg-[#F2F0ED] aspect-[3/2]">
+<img alt="Tidal Mirror" class="w-full h-full object-cover grayscale contrast-110 group-hover:scale-[1.02] transition-transform duration-300" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<span class="absolute top-3 left-3 font-mono text-[10px] tracking-widest uppercase bg-white/90 backdrop-blur-xs text-[#111111] px-2 py-0.5 rounded-[4px] border border-[#E7E5E4]">PL. 06</span>
+</div>
+<div class="p-4 border-t border-[#E7E5E4]">
+<div class="flex items-baseline justify-between mb-1">
+<h2 class="font-display text-base font-semibold text-[#111111] tracking-tight">Tidal Mirror</h2>
+<span class="font-mono text-[11px] text-[#6B7280]">Dyrhólaey</span>
+</div>
+<p class="text-xs text-[#6B7280] leading-relaxed mb-2.5 line-clamp-1">Calm pool trapped between basalt slabs catching low Nordic sky.</p>
+<div class="font-mono text-[11px] text-[#111111]/80 pt-2 border-t border-[#F2F0ED]">
+            Leica M6 • 50mm • f/5.6 • 1/60s • ISO 400
+          </div>
+</div>
+</article>
+</div>
+<!-- Print Edition Acquisition Bar -->
+<section class="mt-16 bg-white border border-[#E7E5E4] rounded-[6px] p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+<div>
+<div class="font-mono text-[10px] uppercase tracking-widest text-[#6B7280] mb-1">Darkroom Archive • Limited Prints</div>
+<h3 class="font-display text-lg font-semibold text-[#111111]">Silver Gelatin Baryta Editions</h3>
+<p class="text-xs text-[#6B7280] mt-1 max-w-md">Each print is exposed under cold cathode enlargers and toned with selenium. Limited run of 10 signed impressions.</p>
+</div>
+<div class="flex items-center space-x-4 shrink-0">
+<span class="font-mono text-xs text-[#6B7280]">Editions 03/10</span>
+<button class="px-5 py-2.5 bg-[#111111] text-white text-xs font-mono tracking-wider uppercase rounded-[6px] hover:bg-neutral-800 transition-colors">
+          Acquisition Inquiry →
+        </button>
+</div>
+</section>
+</main>
+<!-- Lightbox Modal Overlay -->
+<div class="fixed inset-0 z-50 bg-[#111111]/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4 sm:p-8" id="lightbox" onclick="closeLightboxOnBackdrop(event)">
+<div class="relative max-w-4xl w-full bg-white border border-[#E7E5E4] rounded-[6px] overflow-hidden shadow-2xl flex flex-col">
+<!-- Lightbox Header -->
+<div class="px-6 py-4 border-b border-[#E7E5E4] flex items-center justify-between bg-white">
+<div class="flex items-center space-x-3">
+<span class="font-mono text-xs text-[#C2410C] font-medium tracking-widest uppercase" id="lb-plate">PL. 01</span>
+<span class="text-[#E7E5E4]">|</span>
+<span class="font-display text-sm font-semibold text-[#111111] tracking-tight" id="lb-title">Wanderers in the Mist</span>
+</div>
+<button class="text-[#6B7280] hover:text-[#111111] p-1 font-mono text-xs uppercase tracking-wider transition-colors" onclick="closeLightbox()">
+          [ ESC / Close ]
+        </button>
+</div>
+<!-- Lightbox Image Stage -->
+<div class="relative bg-[#111111] flex items-center justify-center min-h-[360px] max-h-[70vh] overflow-hidden">
+<img alt="" class="max-h-[70vh] w-auto max-w-full object-contain grayscale contrast-115" id="lb-img" src=""/>
+<!-- Navigation Buttons -->
+<button class="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 hover:bg-white text-[#111111] backdrop-blur-xs transition-colors shadow" onclick="prevPhoto(event)">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 hover:bg-white text-[#111111] backdrop-blur-xs transition-colors shadow" onclick="nextPhoto(event)">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<!-- Lightbox Footer Meta -->
+<div class="px-6 py-4 bg-[#FAFAF9] border-t border-[#E7E5E4] flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+<div>
+<p class="text-xs text-[#111111] font-medium" id="lb-caption">Solitary figures calibrated against tidal shelf and ocean mist.</p>
+<p class="font-mono text-[11px] text-[#6B7280] mt-0.5" id="lb-loc">Location: Reynisdrangar, Iceland</p>
+</div>
+<div class="font-mono text-[11px] text-[#111111] bg-white px-3 py-1.5 rounded-[4px] border border-[#E7E5E4] shrink-0" id="lb-exif">
+          Hasselblad 500C/M • 80mm • f/4.0 • 1/250s • ISO 400
+        </div>
+</div>
+</div>
+</div>
+<!-- Global Colophon Footer -->
+<footer class="w-full border-t border-[#E7E5E4] bg-[#FAFAF9] py-6 mt-12">
+<div class="max-w-[1120px] mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-mono text-[#6B7280]">
+<div>© 2024 JOEPAUL THOMAS. ALL RIGHTS RESERVED. [TWO SIDES SAME FACE]</div>
+<div class="flex space-x-6 uppercase tracking-widest text-[11px]">
+<a class="hover:text-[#111111] transition-colors" href="#">Index</a>
+<a class="hover:text-[#111111] transition-colors" href="#">Colophon</a>
+<a class="hover:text-[#111111] transition-colors" href="#">Archive</a>
+<a class="hover:text-[#111111] transition-colors" href="#">Transmit</a>
+</div>
+</div>
+</footer>
+<!-- Lightbox JavaScript Logic -->
+<script>
+    const photos = [
+      {
+        plate: "PL. 01",
+        title: "Wanderers in the Mist",
+        loc: "Reynisdrangar, Iceland",
+        caption: "Solitary figures calibrated against tidal shelf and ocean mist.",
+        exif: "Hasselblad 500C/M • 80mm • f/4.0 • 1/250s • ISO 400",
+        src: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1600&q=85"
+      },
+      {
+        plate: "PL. 02",
+        title: "Basalt Organ Columns",
+        loc: "Vik, Iceland",
+        caption: "Hexagonal volcanic geometry shaped by sub-zero gale force winds.",
+        exif: "Leica M6 • 35mm • f/8.0 • 1/60s • ISO 100",
+        src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=85"
+      },
+      {
+        plate: "PL. 03",
+        title: "Vestmannaeyjar Signal",
+        loc: "Heimaey, Iceland",
+        caption: "Remote clifftop beacon dissolving into impassable sea fog.",
+        exif: "Hasselblad 500C/M • 50mm • f/2.0 • 1/500s • ISO 400",
+        src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=85"
+      },
+      {
+        plate: "PL. 04",
+        title: "Subsurface Silt",
+        loc: "Stokksnes, Iceland",
+        caption: "Volcanic black sediment dragged seaward by the tidal surge.",
+        exif: "Leica M6 • 28mm • f/5.6 • 1/125s • ISO 400",
+        src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=85"
+      },
+      {
+        plate: "PL. 05",
+        title: "Observer on the Fjord",
+        loc: "Seydisfjordur, Iceland",
+        caption: "An unhurried silhouette dwarfed by monolithic mountain walls.",
+        exif: "Hasselblad 500C/M • 80mm • f/2.8 • 1/1000s • ISO 400",
+        src: "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=1600&q=85"
+      },
+      {
+        plate: "PL. 06",
+        title: "Tidal Mirror",
+        loc: "Dyrhólaey, Iceland",
+        caption: "Calm pool trapped between basalt slabs catching low Nordic sky.",
+        exif: "Leica M6 • 50mm • f/5.6 • 1/60s • ISO 400",
+        src: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1600&q=85"
+      }
+    ];
+
+    let currentIndex = 0;
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+    const lbPlate = document.getElementById('lb-plate');
+    const lbTitle = document.getElementById('lb-title');
+    const lbCaption = document.getElementById('lb-caption');
+    const lbLoc = document.getElementById('lb-loc');
+    const lbExif = document.getElementById('lb-exif');
+
+    function openLightbox(index) {
+      currentIndex = index;
+      updateLightboxContent();
+      lb.classList.remove('hidden');
+      setTimeout(() => {
+        lb.classList.remove('opacity-0');
+      }, 10);
+      document.body.style.overflow = 'hidden';
+    }
+
+    function updateLightboxContent() {
+      const p = photos[currentIndex];
+      lbImg.src = p.src;
+      lbImg.alt = p.title;
+      lbPlate.textContent = p.plate;
+      lbTitle.textContent = p.title;
+      lbCaption.textContent = p.caption;
+      lbLoc.textContent = "Location: " + p.loc;
+      lbExif.textContent = p.exif;
+    }
+
+    function closeLightbox() {
+      lb.classList.add('opacity-0');
+      setTimeout(() => {
+        lb.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 250);
+    }
+
+    function closeLightboxOnBackdrop(e) {
+      if (e.target === lb) {
+        closeLightbox();
+      }
+    }
+
+    function prevPhoto(e) {
+      if (e) e.stopPropagation();
+      currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+      updateLightboxContent();
+    }
+
+    function nextPhoto(e) {
+      if (e) e.stopPropagation();
+      currentIndex = (currentIndex + 1) % photos.length;
+      updateLightboxContent();
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (lb.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') prevPhoto();
+      if (e.key === 'ArrowRight') nextPhoto();
+    });
+  </script>
+</body>
+</html>

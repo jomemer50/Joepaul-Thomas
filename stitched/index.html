@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Joepaul Thomas — Dual Monograph</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Script with Config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed-dim": "#c6c6c7",
+            "on-tertiary-fixed": "#1a1c1d",
+            "outline": "#7f7570",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#6a635e",
+            "secondary-fixed": "#eae1da",
+            "on-primary-fixed-variant": "#494644",
+            "inverse-primary": "#cbc5c3",
+            "surface-container": "#eeeeed",
+            "surface": "#f9f9f8",
+            "primary": "#000000",
+            "tertiary": "#000000",
+            "on-primary": "#ffffff",
+            "primary-fixed-dim": "#cbc5c3",
+            "on-secondary-fixed": "#1f1b17",
+            "surface-tint": "#625d5c",
+            "error": "#ba1a1a",
+            "on-surface-variant": "#4d4541",
+            "surface-bright": "#f9f9f8",
+            "outline-variant": "#d0c4be",
+            "on-tertiary-container": "#838485",
+            "on-secondary-fixed-variant": "#4b4641",
+            "tertiary-container": "#1a1c1d",
+            "inverse-on-surface": "#f1f1f0",
+            "background": "#f9f9f8",
+            "on-background": "#1a1c1c",
+            "on-primary-fixed": "#1d1b1a",
+            "surface-container-highest": "#e2e2e2",
+            "error-container": "#ffdad6",
+            "secondary": "#645d58",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#cec5bf",
+            "secondary-container": "#eae1da",
+            "on-surface": "#1a1c1c",
+            "on-error": "#ffffff",
+            "inverse-surface": "#2f3130",
+            "surface-container-low": "#f3f4f3",
+            "primary-fixed": "#e8e1df",
+            "surface-variant": "#e2e2e2",
+            "on-primary-container": "#888381",
+            "on-tertiary-fixed-variant": "#454748",
+            "surface-dim": "#dadad9",
+            "primary-container": "#1d1b1a",
+            "surface-container-high": "#e8e8e7",
+            "tertiary-fixed": "#e2e2e3",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "margin-desktop": "3rem",
+            "space-xl": "3rem",
+            "gutter-desktop": "2.5rem",
+            "margin": "1.25rem",
+            "space-md": "1rem",
+            "space-lg": "1.75rem",
+            "gutter": "1.5rem"
+          },
+          "fontFamily": {
+            "headline-lg-mobile": [
+              "Space Grotesk"
+            ],
+            "label-sm": [
+              "JetBrains Mono"
+            ],
+            "body-lg": [
+              "Inter"
+            ],
+            "label-md": [
+              "JetBrains Mono"
+            ],
+            "headline-xl-mobile": [
+              "Space Grotesk"
+            ],
+            "headline-sm": [
+              "Space Grotesk"
+            ],
+            "body-md": [
+              "Inter"
+            ],
+            "headline-md": [
+              "Space Grotesk"
+            ],
+            "body-sm": [
+              "Inter"
+            ],
+            "headline-xl": [
+              "Space Grotesk"
+            ],
+            "headline-lg": [
+              "Space Grotesk"
+            ],
+            "caption-code": [
+              "JetBrains Mono"
+            ]
+          },
+          "fontSize": {
+            "headline-lg-mobile": [
+              "2rem",
+              {
+                "lineHeight": "1.2",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "500"
+              }
+            ],
+            "label-sm": [
+              "0.6875rem",
+              {
+                "lineHeight": "1.3",
+                "letterSpacing": "0.06em",
+                "fontWeight": "400"
+              }
+            ],
+            "body-lg": [
+              "1.125rem",
+              {
+                "lineHeight": "1.65",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "400"
+              }
+            ],
+            "label-md": [
+              "0.8125rem",
+              {
+                "lineHeight": "1.3",
+                "letterSpacing": "0.04em",
+                "fontWeight": "500"
+              }
+            ],
+            "headline-xl-mobile": [
+              "2.5rem",
+              {
+                "lineHeight": "1.1",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "600"
+              }
+            ],
+            "headline-sm": [
+              "1.25rem",
+              {
+                "lineHeight": "1.4",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "500"
+              }
+            ],
+            "body-md": [
+              "0.9375rem",
+              {
+                "lineHeight": "1.6",
+                "letterSpacing": "0em",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-md": [
+              "2rem",
+              {
+                "lineHeight": "1.25",
+                "letterSpacing": "-0.015em",
+                "fontWeight": "500"
+              }
+            ],
+            "body-sm": [
+              "0.8125rem",
+              {
+                "lineHeight": "1.5",
+                "letterSpacing": "0.005em",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-xl": [
+              "4.5rem",
+              {
+                "lineHeight": "1.05",
+                "letterSpacing": "-0.03em",
+                "fontWeight": "600"
+              }
+            ],
+            "headline-lg": [
+              "3rem",
+              {
+                "lineHeight": "1.15",
+                "letterSpacing": "-0.025em",
+                "fontWeight": "500"
+              }
+            ],
+            "caption-code": [
+              "0.625rem",
+              {
+                "lineHeight": "1.2",
+                "letterSpacing": "0.08em",
+                "fontWeight": "400"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    /* Architectural Micro-Grid Background for Left Pane */
+    .arch-grid-pattern {
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    
+    /* Rotating axis label animation */
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .animate-spin-slow {
+      animation: spin-slow 28s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden selection:bg-primary selection:text-on-primary">
+<!-- ================= TOP NAV BAR (SHARED COMPONENT) ================= -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-margin md:px-margin-desktop py-space-sm h-16 bg-surface/80 dark:bg-tertiary-container/80 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline/20">
+<div class="flex items-center space-x-6">
+<a class="text-headline-sm font-headline-sm font-semibold tracking-tighter text-on-surface dark:text-inverse-on-surface flex items-center gap-2" href="#">
+<span>JT</span>
+<span class="hidden sm:inline-block text-caption-code font-caption-code text-secondary tracking-widest uppercase font-normal border-l border-outline-variant/50 pl-3">JOEPAUL THOMAS</span>
+</a>
+<span class="hidden lg:inline-flex items-center gap-2 px-2.5 py-0.5 border border-outline-variant/40 text-caption-code font-caption-code text-on-surface-variant">
+<span>ARCH_INDEX // 2024</span>
+</span>
+</div>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-primary dark:text-inverse-primary font-label-md text-label-md uppercase tracking-wider hover:text-primary dark:hover:text-on-primary transition-colors duration-150" href="#software">Software</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-label-md text-label-md uppercase tracking-wider hover:text-primary dark:hover:text-on-primary transition-colors duration-150" href="#frames">Frames</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-label-md text-label-md uppercase tracking-wider hover:text-primary dark:hover:text-on-primary transition-colors duration-150" href="#about">About</a>
+</nav>
+<!-- Trailing Actions & Availability Status -->
+<div class="flex items-center space-x-4">
+<div class="hidden xl:flex items-center gap-2 text-caption-code font-caption-code text-secondary">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+<span class="tracking-widest uppercase">AVAILABLE FOR SELECT PROJECTS</span>
+</div>
+<a class="px-4 py-1.5 border border-primary dark:border-outline text-label-md font-label-md uppercase tracking-wider text-primary dark:text-inverse-primary hover:bg-primary hover:text-on-primary dark:hover:bg-inverse-primary dark:hover:text-primary transition-colors duration-200" href="#contact">
+        Contact
+      </a>
+</div>
+</header>
+<!-- ================= BIFURCATED DUALITY CANVAS ================= -->
+<main class="relative w-full min-h-screen pt-16 flex flex-col lg:flex-row">
+<!-- ================= LEFT HEMISPHERE: SOFTWARE ENGINEERING ================= -->
+<section class="relative w-full lg:w-1/2 min-h-[calc(100vh-4rem)] bg-surface arch-grid-pattern px-margin md:px-margin-desktop py-space-xl flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-outline-variant/30" id="software">
+<!-- Precision Registration Crosshairs -->
+<div class="absolute top-4 left-4 text-caption-code font-caption-code text-outline-variant select-none pointer-events-none">+</div>
+<div class="absolute top-4 right-4 text-caption-code font-caption-code text-outline-variant select-none pointer-events-none">+</div>
+<div class="absolute bottom-4 left-4 text-caption-code font-caption-code text-outline-variant select-none pointer-events-none">+</div>
+<!-- Top Technical Telemetry Coordinates -->
+<div class="flex flex-wrap items-center justify-between gap-4 border-b border-outline-variant/40 pb-space-sm pt-2">
+<div class="flex items-center gap-4">
+<span class="text-caption-code font-caption-code text-on-surface-variant uppercase tracking-widest">[ LAT 40.7128° N // LON 74.0060° W ]</span>
+<span class="hidden sm:inline-block text-caption-code font-caption-code text-secondary tracking-widest">// NODE: 0x01</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-block w-1 h-1 bg-primary rounded-full"></span>
+<span class="text-caption-code font-caption-code text-secondary uppercase tracking-widest">SYS_ONLINE: VERIFIED</span>
+</div>
+</div>
+<!-- Center Body: Architectural Statements & Headline -->
+<div class="my-auto py-12 md:py-16 max-w-xl">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 border border-outline-variant/60 text-label-sm font-label-sm text-secondary uppercase tracking-wider mb-6 bg-surface-container-lowest/70">
+<span>DISCIPLINE: ARCHITECTURE &amp; SYSTEMS</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tighter mb-3">
+          Engineer.
+        </h1>
+<p class="font-body-lg text-body-lg text-secondary mb-8 font-normal">
+          quiet systems, clean interfaces
+        </p>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md leading-relaxed mb-10">
+          Synthesizing high-throughput distributed micro-architectures with micro-second reactive frontends. A design engineering thesis dedicated to deterministic reduction, mathematical rhythm, and resilient web infrastructure.
+        </p>
+<!-- Technical Domain Tags -->
+<div class="flex flex-wrap gap-2 mb-12">
+<span class="px-3 py-1 border border-outline-variant text-label-sm font-label-sm text-secondary uppercase tracking-wider bg-surface-container-lowest/60">[ Distributed Systems ]</span>
+<span class="px-3 py-1 border border-outline-variant text-label-sm font-label-sm text-secondary uppercase tracking-wider bg-surface-container-lowest/60">[ TypeScript // Rust ]</span>
+<span class="px-3 py-1 border border-outline-variant text-label-sm font-label-sm text-secondary uppercase tracking-wider bg-surface-container-lowest/60">[ UI Architecture ]</span>
+<span class="px-3 py-1 border border-outline-variant text-label-sm font-label-sm text-secondary uppercase tracking-wider bg-surface-container-lowest/60">[ Next-Gen Web ]</span>
+</div>
+<!-- Architectural Button CTA -->
+<div>
+<a class="inline-flex items-center gap-3 px-6 py-3.5 border border-primary text-label-md font-label-md uppercase tracking-wider text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150 group" href="#software-archive">
+<span>+ ENTER SOFTWARE</span>
+<span class="group-hover:translate-x-1 transition-transform duration-150">-&gt;</span>
+</a>
+</div>
+</div>
+<!-- Left Footnote Metadata Grid -->
+<div class="pt-space-md border-t border-outline-variant/30 flex flex-col sm:flex-row items-start sm:items-center justify-between text-caption-code font-caption-code text-secondary gap-2">
+<div class="flex items-center gap-3">
+<span class="font-semibold text-primary">01 / DISCIPLINE</span>
+<span class="text-outline-variant">|</span>
+<span>INDEX RATIO: 64.2%</span>
+</div>
+<div>
+<span>LOC_NY // SHIFT: UTC-4</span>
+</div>
+</div>
+</section>
+<!-- ================= RIGHT HEMISPHERE: PHOTOGRAPHY & VISUAL ARCHIVE ================= -->
+<section class="relative w-full lg:w-1/2 min-h-[calc(100vh-4rem)] bg-tertiary-container text-inverse-on-surface px-margin md:px-margin-desktop py-space-xl flex flex-col justify-between overflow-hidden" id="frames">
+<!-- Full-Bleed Mood Backdrop Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Quiet Coast Vol 1 Wanderers in the Mist 35mm film" class="w-full h-full object-cover object-center filter brightness-[0.72] contrast-[1.1] saturate-[0.85] transform scale-[1.02] hover:scale-100 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1U_WhDePh5q1rFilI29hnbx7HrjqIJBSGGM0jDbJ292otAxAwEo2fZmecJNfi6LNv952-JMGj3de9_K0m96ffaNtjm1k30ar1258ZFzjgijcXSQWooxe7bzE0iHTHCVgQRDdaPHn3eecST-BURpHU_Hy2dvsZoOEw8VjPfh9wqRGPeduZmNrg0w-o4UGoN8qjMY7I5x1g-Bdw_yL5sa7jQI6GJmxsOlhF97gN0C96nT87bLsNkXKx_G6A"/>
+<!-- Radial Cinematic Vignette & Grain Layer -->
+<div class="absolute inset-0 bg-gradient-to-t from-tertiary/90 via-tertiary/40 to-tertiary/75"></div>
+</div>
+<!-- Precision Dark Registration Crosshairs -->
+<div class="absolute top-4 right-4 text-caption-code font-caption-code text-inverse-primary/30 select-none pointer-events-none z-10">+</div>
+<div class="absolute bottom-4 right-4 text-caption-code font-caption-code text-inverse-primary/30 select-none pointer-events-none z-10">+</div>
+<!-- Top Photographic Telemetry HUD -->
+<div class="relative z-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-space-sm pt-2">
+<div class="flex items-center gap-3">
+<span class="text-caption-code font-caption-code text-inverse-primary uppercase tracking-widest">[VOL.02 // VISUAL ARCHIVE]</span>
+<span class="text-caption-code font-caption-code text-secondary-fixed-dim uppercase tracking-widest hidden sm:inline-block">// 35MM &amp; MEDIUM FORMAT</span>
+</div>
+<div class="px-2.5 py-0.5 rounded-none bg-white/5 border border-white/15 backdrop-blur-md text-caption-code font-caption-code text-inverse-primary tracking-widest uppercase">
+          ISO 400 · 28MM · COLD WATER
+        </div>
+</div>
+<!-- Center Body: Evocative Visual Monograph -->
+<div class="relative z-10 my-auto py-12 md:py-16 max-w-xl">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 border border-white/20 bg-black/40 backdrop-blur-md text-label-sm font-label-sm text-inverse-primary uppercase tracking-wider mb-6">
+<span>CHRONICLE: ANALOG LANDSCAPES &amp; FORM</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-white tracking-tighter mb-3 drop-shadow-sm">
+          Frames.
+        </h2>
+<p class="font-body-lg text-body-lg text-secondary-fixed-dim mb-8 font-light italic">
+          coasts, cities, strangers — documenting quiet monumentality
+        </p>
+<p class="font-body-md text-body-md text-inverse-primary/80 max-w-md leading-relaxed mb-10 drop-shadow-sm">
+          A physical pilgrimage capturing coastal basalt fractures, lingering fog, and fleeting metropolitan silences through Leica M mechanical rangefinders and mechanical silver gelatin emulsion.
+        </p>
+<!-- Aesthetic Category Tags -->
+<div class="flex flex-wrap gap-2 mb-12">
+<span class="px-3 py-1 bg-white/5 border border-white/15 backdrop-blur-md text-label-sm font-label-sm text-inverse-primary uppercase tracking-wider">[ Nordic Coast ]</span>
+<span class="px-3 py-1 bg-white/5 border border-white/15 backdrop-blur-md text-label-sm font-label-sm text-inverse-primary uppercase tracking-wider">[ Kyoto Twilight ]</span>
+<span class="px-3 py-1 bg-white/5 border border-white/15 backdrop-blur-md text-label-sm font-label-sm text-inverse-primary uppercase tracking-wider">[ Silhouettes ]</span>
+<span class="px-3 py-1 bg-white/5 border border-white/15 backdrop-blur-md text-label-sm font-label-sm text-inverse-primary uppercase tracking-wider">[ Atmospheres ]</span>
+</div>
+<!-- Cinematic HUD Button CTA -->
+<div>
+<a class="inline-flex items-center gap-3 px-6 py-3.5 border border-white/30 bg-black/40 backdrop-blur-md text-label-md font-label-md uppercase tracking-wider text-white hover:bg-white hover:text-black transition-colors duration-200 group" href="#frames-gallery">
+<span>+ ENTER FRAMES</span>
+<span class="group-hover:translate-x-1 transition-transform duration-150">-&gt;</span>
+</a>
+</div>
+</div>
+<!-- Right Footnote Metadata Grid -->
+<div class="relative z-10 pt-space-md border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between text-caption-code font-caption-code text-secondary-fixed-dim gap-2">
+<div class="flex items-center gap-3">
+<span class="font-semibold text-white">02 / ARTIFACTS</span>
+<span class="text-white/20">|</span>
+<span>ARCHIVE COUNT: 142 EXPOSURES</span>
+</div>
+<div>
+<span>REEL_ID: ILFORD_HP5_2024</span>
+</div>
+</div>
+</section>
+<!-- ================= THE AXIS BADGE (SIGNATURE CENTER COMPONENT) ================= -->
+<div class="hidden lg:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 items-center justify-center pointer-events-none select-none">
+<!-- Outer Rotating Orbital Ring with SVG Circular Label -->
+<div class="relative w-28 h-28 flex items-center justify-center">
+<svg class="w-full h-full animate-spin-slow" viewbox="0 0 100 100">
+<defs>
+<path d="M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" id="badge-circle-path"></path>
+</defs>
+<text class="text-[7px] font-caption-code font-mono uppercase tracking-[0.28em] fill-current">
+<textpath class="text-on-surface" href="#badge-circle-path">
+              JOEPAUL THOMAS · AXIS · TWO SIDES SAME FACE ·
+            </textpath>
+</text>
+</svg>
+<!-- Outer Boundary Hairline Ring -->
+<div class="absolute inset-0 rounded-full border border-outline-variant/70"></div>
+<!-- Intermediate Concentric Hairline Ring -->
+<div class="absolute inset-2 rounded-full border border-dashed border-outline-variant/60"></div>
+<!-- Center Inverted Core Capsule -->
+<div class="absolute inset-5 rounded-full flex items-center justify-center overflow-hidden shadow-sm">
+<!-- Split hemisphere inside badge -->
+<div class="w-1/2 h-full bg-surface border-r border-outline-variant flex items-center justify-end pr-1">
+<span class="text-label-md font-headline-sm font-bold text-on-surface">J</span>
+</div>
+<div class="w-1/2 h-full bg-tertiary-container flex items-center justify-start pl-1">
+<span class="text-label-md font-headline-sm font-bold text-inverse-on-surface">T</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- ================= FOOTER (SHARED COMPONENT) ================= -->
+<footer class="w-full border-t border-outline-variant/30 dark:border-outline/20 px-margin md:px-margin-desktop py-space-md flex flex-col md:flex-row justify-between items-center z-40 bg-surface dark:bg-tertiary gap-4">
+<div class="flex flex-col sm:flex-row items-center gap-3">
+<span class="text-caption-code font-caption-code uppercase tracking-widest text-on-surface-variant dark:text-secondary-fixed-dim">
+        © 2024 JOEPAUL THOMAS. ALL RIGHTS RESERVED. [TWO SIDES SAME FACE]
+      </span>
+</div>
+<!-- Navigation Links -->
+<div class="flex items-center space-x-6">
+<a class="text-secondary dark:text-secondary-fixed-dim font-caption-code text-caption-code uppercase tracking-widest hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#index">Index</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-caption-code text-caption-code uppercase tracking-widest hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#colophon">Colophon</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-caption-code text-caption-code uppercase tracking-widest hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#archive">Archive</a>
+<a class="text-on-surface dark:text-inverse-on-surface underline font-caption-code text-caption-code uppercase tracking-widest hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors duration-150" href="#transmit">Transmit</a>
+</div>
+</footer>
+</body></html>
